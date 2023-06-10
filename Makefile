@@ -9,7 +9,7 @@ default: server
 	@@sed '$$d' nohup.out 
 
 # start the local web server
-server: stop convert
+server: clean convert
 	@echo "Starting server..."
 	@@nohup bundle exec jekyll serve -H 0.0.0.0 -P 4200 2>&1 & \
 		PID=$$!; \
