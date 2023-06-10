@@ -1,8 +1,7 @@
 ## Blog site using GitHub Pages and Jekyll
-> This site is intended for Teachers.   This is to build lessons and distribute across different sections.
-- This support 3 computer science sections that are in a pathway (JavaScript, Python/Flask, Java/Spring)
-- JavaScript documents are new material for entry class into the pathway, they are prerequisites for the Python and Java classes.
-- All course material works off of Notebooks using Python kernel, except Java which requires it own kernel.
+> This site is intended for Students.   This is to take notes and complete hacks.
+- This can be customized to support computer science as you work through pathway (JavaScript, Python/Flask, Java/Spring)
+- All course material work off of _posts or _notebooks.  
 
 ## Preview Site 
 > GitHub Pages development is optimized by testing and developing on your local machine.  This is called previewing you work, prior to commit and push. 
@@ -23,7 +22,7 @@ bundle install
     ```bash
     make convert
     ```
-    - clean constructed files
+    - stop and clean constructed files
     ```bash
     make clean
     ```
