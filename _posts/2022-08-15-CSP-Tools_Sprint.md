@@ -4,9 +4,9 @@ comments: true
 layout: post
 title: Tool Setup Sprint
 description: Become one with your tools.  They could be more important than code, code, code.
-courses: { csp: {week: 0, categories: [4.A]} }
-categories: [C1.4]
 type: plans
+courses: { csse: {week: 0}, csp: {week: 0, categories: [4.A]} }
+categories: [C1.4]
 ---
 
 ### PBL Sprint 0 / Week 0

@@ -41,9 +41,9 @@ Load all posts
   <tr>
     <th>Week</th>
     <th>Plans</th>
-    <th>Code, Code, Code</th>
-    <th>Tools and DevOps</th>
-    <th>Collaboration</th>
+    <th>Hacks</th>
+    <th>Review-Ticket</th>
+    <th>Notes</th>
   </tr>
 
   {%comment%} 
@@ -60,10 +60,10 @@ Load all posts
 
   {% for index in (start..end) -%}
     {% assign plans = null | compact %}
-    {% assign ccc = null | compact %}
-    {% assign devops = null | compact %}
-    {% assign collab = null | compact %}
-    {% assign uk = null | compact %}
+    {% assign hacks = null | compact %}
+    {% assign ticket = null | compact %}
+    {% assign notes = null | compact %}
+
 
   {%comment%} 
   <!-- looping through all posts -->
@@ -89,15 +89,15 @@ Load all posts
           {% if post.type == "plans" %} 
               {% assign plans = plans | push: title %}
               {% assign plans = plans | push: url %}
-          {% elsif post.type == "ccc" %}
-              {% assign ccc = ccc | push: title %}
-              {% assign ccc = ccc | push: url %}  
-          {% elsif post.type == "devops" %}
-              {% assign devops = devops | push: title %}
-              {% assign devops = devops | push: url %} 
-          {% elsif post.type == "collab" %}
-              {% assign collab = collab | push: title %}
-              {% assign collab = collab | push: url %} 
+          {% elsif post.type == "hacks" %}
+              {% assign hacks = hacks | push: title %}
+              {% assign hacks = hacks | push: url %} 
+          {% elsif post.type == "ticket" %}
+              {% assign ticket = ticket | push: title %}
+              {% assign ticket = ticket | push: url %} 
+          {% elsif post.type == "notes" %}
+              {% assign notes = notes | push: title %}
+              {% assign notes = notes | push: url %} 
           {% else %}
               {% assign uk = uk | push: title %}
               {% assign uk = uk | push: url %}     
@@ -110,7 +110,7 @@ Load all posts
   {%comment%} 
   <!-- ordering units and inserting column delimiters -->
   {%endcomment%}
-  {% assign units = units | concat:plans | concat:deli | concat:ccc | concat:deli | concat:devops | concat:deli | concat:collab %}
+  {% assign units = units | concat:plans | concat:deli | concat:hacks | concat:deli | concat:ticket | concat:deli | concat:notes %}
 
   {%comment%} 
   <!-- Forever Loop with base condition break processes units and build html for each type-->

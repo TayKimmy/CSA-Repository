@@ -11,7 +11,7 @@ default: server
 # start the local web server
 server: stop convert
 	@echo "Starting server..."
-	@@nohup bundle exec jekyll serve -H 0.0.0.0 -P 4100 2>&1 & \
+	@@nohup bundle exec jekyll serve -H 0.0.0.0 -P 4200 2>&1 & \
 		PID=$$!; \
 		echo "Server PID: $$PID"
 	@@until [ -f nohup.out ]; do sleep 1; done
@@ -34,8 +34,8 @@ clean: stop
 # stop the server and clean up the port
 stop:
 	@echo "Stopping server..."
-	@# kills process running on port 4100
-	@@lsof -ti :4100 | xargs kill >/dev/null 2>&1 || true
+	@# kills process running on port 4200
+	@@lsof -ti :4200 | xargs kill >/dev/null 2>&1 || true
 	@# kills previously running logging processes
 	@pkill -f "tail -f nohup.out" || true  
 	@# removes log
