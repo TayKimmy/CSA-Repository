@@ -10,7 +10,7 @@ categories: [C1.4]
 ---
 
 ### PBL Sprint 0 / Week 0
-Learning outcome.  Getting adapted to the Agile mindset used in Computer Science.  Additionally, getting introduced to GitHub and showing usage of VSCode.   Building a personal and running GitHub Pages.
+Learning outcome.  Getting introduced to GitHub and showing usage of VSCode.   Building a personal and running GitHub Pages.
 - Wednesday - "Introduction Sprint".  Pick pair share partner, Pick crossover pair, Establish team of four.  Spend some time talking and getting to know each other, particularly with Computer Science experience and goals.  You should be matched with someone of similar experience.
 - Thursday - Review "Tools and Equipment".  Bringing your laptop.  Setup GitHub Pages and Tools and push code to your Repo and track updates of Fastpages to deployment.
 - Friday - Start with Pair work. Spend 25 minutes at keyboard finishing installation and performing GitHub pages setup, while Pair Share observes and consults.  Next 25 minutes Pairs reverse roles.
