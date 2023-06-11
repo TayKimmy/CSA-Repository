@@ -4,6 +4,8 @@ layout: default
 
 {%comment%} 
 Setup course data
+    - Extract data by course
+    - Within course create units
 {%endcomment%}
 
 {% assign course = site.data[page.course] %} <!-- Load YML data -->
@@ -12,7 +14,7 @@ Setup course data
 <br>
 
 {%comment%} 
-Load all posts
+Load all posts with site
 {%endcomment%}
 
 {% assign posts = null | compact %}
@@ -34,7 +36,7 @@ Load all posts
 {% assign end = unitData.end %}
 
 {%comment%} 
-<!-- Column Headings for Blogs -->
+<!-- Output Column Headings for Blogs -->
 {%endcomment%}
 
 <table>
@@ -87,20 +89,20 @@ Load all posts
   <!-- organizing blogs by type -->
   {%endcomment%}
           {% if post.type == "plans" %} 
-              {% assign plans = plans | push: title %}
-              {% assign plans = plans | push: url %}
+              {% assign plans = plans | unshift: title %}
+              {% assign plans = plans | unshift: url %}
           {% elsif post.type == "hacks" %}
-              {% assign hacks = hacks | push: title %}
-              {% assign hacks = hacks | push: url %} 
+              {% assign hacks = hacks | unshift: title %}
+              {% assign hacks = hacks | unshift: url %} 
           {% elsif post.type == "ticket" %}
-              {% assign ticket = ticket | push: title %}
-              {% assign ticket = ticket | push: url %} 
+              {% assign ticket = ticket | unshift: title %}
+              {% assign ticket = ticket | unshift: url %} 
           {% elsif post.type == "notes" %}
-              {% assign notes = notes | push: title %}
-              {% assign notes = notes | push: url %} 
+              {% assign notes = notes | unshift: title %}
+              {% assign notes = notes | unshift: url %} 
           {% else %}
-              {% assign uk = uk | push: title %}
-              {% assign uk = uk | push: url %}     
+              {% assign uk = uk | unshift: title %}
+              {% assign uk = uk | unshift: url %}     
           {% endif %}
 
         {% endif %}
@@ -113,12 +115,12 @@ Load all posts
   {% assign units = units | concat:plans | concat:deli | concat:hacks | concat:deli | concat:ticket | concat:deli | concat:notes %}
 
   {%comment%} 
-  <!-- Forever Loop with base condition break processes units and build html for each type-->
+  <!-- This Loop is maximum iterationss, since elements are pairs it will decrement a extra times at the end -->
   {%endcomment%}
   <tr>
   <td> {{ index }} </td> 
   <td>
-  {% for i in (0..100) -%} 
+  {% for i in (0..units.size) -%} 
     {% if units.size == 0 %}
       {% break %}
     {% elsif units[0] == sym %} <!-- make new column -->
@@ -126,7 +128,7 @@ Load all posts
   <td>
       {% assign units = units | shift %} <!-- remove delimiter -->
     {% else %} <!-- make a link in the column -->
-      - <a href="{{site.baseurl}}/{{units[1]}}">{{units[0]}}</a> <br/> 
+      - <a href="{{site.baseurl}}/{{units[0]}}">{{units[1]}}</a> <br/> 
       {% assign units = units | shift | shift %} <!-- remove title and url -->
     {% endif %}
   {% endfor %}
