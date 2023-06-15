@@ -1,8 +1,8 @@
 ## Blog site using GitHub Pages and Jekyll
-> This site is intended for Students.   This is to take notes and complete hacks.
+> This site is intended for Students.   This is to record plans, complete hacks, and do extra work for your learning.
 - This can be customized to support computer science as you work through pathway (JavaScript, Python/Flask, Java/Spring)
-- All tangible work is in a _posts or _notebooks.  
-- Front matter (aka meta data) is used to organize information by week and column.
+- All tangible artifact work is in a _posts or in a _notebooks.  
+- Front matter (aka meta data) is used to organize information according to week and column.
 
 ## Preview Site 
 > GitHub Pages development is optimized by testing and developing on your local machine.  This is called previewing you work, prior to commit and push.
