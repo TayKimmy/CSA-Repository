@@ -70,7 +70,7 @@ gem install jekyll bundler
 ```
 
 ### Run Locally
-- Result of these step is server running on: http://0.0.0.0:4100/teacher/.  Regeneration messages will run in terminal on any save.  Press Enter key in terminal at any time to type commands.
+- Result of these step is server running on: http://0.0.0.0:4200/student/.  Regeneration messages will run in terminal on any save.  Press Enter key in terminal at any time to type commands.
 
 - Complete installation
 ```bash
