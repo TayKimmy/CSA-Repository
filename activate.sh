@@ -1,21 +1,34 @@
 <<comment
-# The hash # is a comment or action, # is not part of the comment or action
-# The dollar $ represent a terminal command, $ is not part of command
+# Help
+# Objective of this exercise is to test cloud environment ...
+#     plus, start a Web Server
+# The hash # is a comment or action ...
+#     # is a comment symbol in this .sh file 
+# The dollar $ represent a terminal command ... 
+#     $ is not part of command
 
 # Start a terminal for commands
 $ git clone https://github.com/nighthawkcoders/student.git
 $ ./student/activate.sh
 
-# Start a new terminal
-$ gem install jekyll bundler
+# Run the cat command, leave this terminal open ...
+#    the cat command shows remaining instructions.
+$ cat ./student/activate.sh
+
+# Start a new terminal ...
+#    the "new" terminal is the command terminal ...
+#    the "original" terminal shows commands ...
+#    type commands in "new" terminal
 $ conda activate
 $ cd student
 $ bundle install
 $ bundle exec jekyll serve
 
-# The build execution is complete
-# Ctl-Click on "link" in terminal
-# Observe web site in browser
+# End
+# The build execution is complete ...
+#     Ctl-Click on "link" in terminal ...
+#     observe web site in the opened browser
+
 comment
 
 ## Terminal Commands
@@ -30,5 +43,7 @@ export PATH="$HOME/gems/bin:$PATH"
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+echo "=== Gem install starting, thinkin... ==="
 gem install jekyll bundler
+echo "=== Ignore Error installing jekyll ==="
 
