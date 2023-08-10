@@ -2,7 +2,7 @@
 # The hash # is a comment or action, # is not part of the comment or action
 # The dollar $ represent a terminal command, $ is not part of command
 
-# Start a terminal 
+# Start a terminal for commands
 $ git clone https://github.com/nighthawkcoders/student.git
 $ ./student/activate.sh
 
