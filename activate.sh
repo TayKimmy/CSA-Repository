@@ -31,11 +31,6 @@ $ bundle exec jekyll serve
 
 comment
 
-## Terminal Commands
-#### Installs ruby and gnu tools
-echo "=== Missing Packages ==="
-sudo apt -y install ruby-full build-essential
-
 #### Github Pages Local Build
 echo "=== GitHub pages build tools  ==="
 export GEM_HOME="$HOME/gems"
