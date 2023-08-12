@@ -20,7 +20,6 @@ $ cat ./student/activate.sh
 #    the "new" terminal is the command terminal ...
 #    the "original" terminal shows commands ...
 #    type commands in "new" terminal
-$ conda activate
 $ cd student
 $ bundle install
 $ bundle exec jekyll serve
@@ -44,7 +43,7 @@ export PATH="$HOME/gems/bin:$PATH"
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-echo "=== Gem install starting, thinkin... ==="
+echo "=== Gem install starting, thinking... ==="
 gem install jekyll bundler
 echo "=== Ignore Error installing jekyll ==="
 
