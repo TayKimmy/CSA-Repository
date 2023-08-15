@@ -18,64 +18,65 @@ Deployment Cycle.  In the deplopyment cycle, `sync-github-action-review`, it is 
 
 ### WSL and/or Ubuntu installation requirements
 - The result of these step is Ubuntu tools to run preview server.  These procedures were created using [jekyllrb.com](https://jekyllrb.com/docs/installation/ubuntu/)
+- Run scripts in scripts directory of teacher repo: setup_ubuntu.sh and activate.sh.  Or, follow commands below.
 ```bash
-# ruby
-# WSL/Ubuntu commands
+## WSL/Ubuntu commands
+# sudo apt install, installs packages for Ubuntu
+echo "=== Ugrade Packages ==="
+sudo apt update
+sudo apt upgrade -y
 #
-# install Ruby for WSL
-# sudo apt install. installs packages for Ubuntu
-sudo apt install ruby-full build-essential zlib1g-dev
-# the following "echo" commands adds gems installation directory into the .bashrc file, avoiding root requirements
+echo "=== Install Ruby ==="
+sudo apt install -y ruby-full build-essential zlib1g-dev
+# 
+echo "=== Install Python ==="
+sudo apt-get install -y python3 python3-pip python-is-python3
+#    
+echo "=== Install Jupyter Notebook ==="
+sudo apt-get install -y jupyter-notebook
+
+# bash commands, install user requirements.
+echo "=== GitHub pages build tools  ==="
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
 echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-#
-# install conda for WSL Ubuntu
-wget -q https://repo.anaconda.com/miniconda/wget -q Miniconda3-latest-Linux-x86.sh -O /tmp/miniconda.sh
-bash /tmp/miniconda.sh -b -p $HOME/miniconda
-# Configure ruby into shell
-conda init bash
-#
-# source the .bashrc file or relanuch terminal
-source ~/.bashrc
-# update conda
-conda update -n base -y -c defaults conda
-conda install -y -c conda-forge pyyam
-# install jekyll and bundler
+echo "=== Gem install starting, thinking... ==="
 gem install jekyll bundler
+head -30 ./teacher/scripts/activate.sh
+echo "=== !!!Start a new Terminal!!! ==="
 ```
 
 ### MacOs installation requirements 
-- Ihe result of these step are MacOS tools to run preview server.  These procedures were created using [jekyllrb.com](https://jekyllrb.com/docs/installation/macos/)
+- Ihe result of these step are MacOS tools to run preview server.  These procedures were created using [jekyllrb.com](https://jekyllrb.com/docs/installation/macos/). Run scripts in scripts directory of teacher repo: setup_macos.sh and activate_macos.sh.  Or, follow commands below.
 ```bash
-# ruby
 # MacOS commands
+# brew install, installs packages for MacOS
+echo "=== Ugrade Packages ==="
+brew update
+brew upgrade
 #
-# Install Ruby for MacOS
+echo "=== Install Ruby ==="
 brew install chruby ruby-install xz
 ruby-install ruby 3.1.3
-# Configure ruby into shell using .zshrc
-echo "source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh" >> ~/.zshrc
-echo "source $(brew --prefix)/opt/chruby/share/chruby/auto.sh" >> ~/.zshrc
+#
+echo "=== Install Python ==="
+brew install python
+#    
+echo "=== Install Jupyter Notebook ==="
+brew install jupyter
+
+# bash commands, install user requirements.
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
 echo '# Install Ruby Gems to ~/gems' >> ~/.zshrc
 echo 'export GEM_HOME="$HOME/gems"' >> ~/.zshrc
 echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.zshrc
-#
-# install conda for MacOS
-wget -q https://repo.anaconda.com/miniconda/Miniconda3-latest-MacOSX-x86_64.sh -O /tmp/miniconda.sh
-bash /tmp/miniconda.sh -b -p $HOME/miniconda
-# Configure ruby into shell
-conda init zsh
-
-#
-# source the .zshrc file or relanuch terminal
-source ~/.zshrc
-#
-# update conda
-conda update -n base -y -c defaults conda
-conda install -y -c conda-forge pyyam
-# install jekyll
+echo "=== Gem install starting, thinking... ==="
 gem install jekyll bundler
+head -30 ./teacher/scripts/activate.sh
+echo "=== !!!Start a new Terminal!!! ==="
 ```
 
 ### Preview
