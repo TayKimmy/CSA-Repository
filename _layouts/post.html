@@ -54,10 +54,14 @@ layout: default
       </p>
     {% endif %}
 
+    {%- if page.toc -%}
+      {% include toc.html html=content %}
+    {%- endif -%}
+
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    {{ content | toc  }}
+    {{ content }}
   </div>
   {%- if page.comments -%}
     {%- include utterances.html -%}

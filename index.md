@@ -1,7 +1,11 @@
 ---
 layout: default
-title: Student Blog
+title: Tay's Blog
 ---
+<script>
+    
+</script>
+
 
 ## Build you Home Page here 
 This is about your journey. Start now!!!
