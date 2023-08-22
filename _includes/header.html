@@ -1,14 +1,59 @@
+<style>
+  ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 10px solid #e7e7e7;
+    background-color: #f3f3f3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+}
+
+li.nav-item {
+    float: left;
+    margin: 0;
+}
+
+li.nav-item a {
+    padding: 0 1.5rem;
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+}
+
+li.nav-item a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li.nav-item a.active {
+    color: white;
+    background-color: #484f93;
+}
+
+li.nav-item a.back {
+    color: black;
+    background-color: white;
+}
+
+li.nav-item a.back:hover {
+    background-color: #4f538b;
+}
+</style>
 <header class="site-header">
 
   <div id="header">
     <nav>
-      <ul>
-        <li class="fork"><a href="https://taykimmy.github.io/CSA_Repo/">Home</a></li>
-        <li class="fork"><a href="https://taykimmy.github.io/CSA_Repo/csse">CSSE</a></li>
-        <li class="fork"><a href="https://taykimmy.github.io/CSA_Repo/csp">CSP</a></li>
-        <li class="fork"><a href="https://taykimmy.github.io/CSA_Repo/csa">CSA</a></li>
-        <li class="fork"><a href="https://taykimmy.github.io/CSA_Repo/blogs">Blogs</a></li>
-        <li class="title"><a href="{{ site.github.repository_url }}#readme">View On GitHub</a></li>
+      <ul class="navbar">
+        <li class="nav-item"><a href="https://taykimmy.github.io/CSA_Repo/">Home</a></li>
+        <li class="nav-item"><a href="https://taykimmy.github.io/CSA_Repo/csse">CSSE</a></li>
+        <li class="nav-item"><a href="https://taykimmy.github.io/CSA_Repo/csp">CSP</a></li>
+        <li class="nav-item"><a href="https://taykimmy.github.io/CSA_Repo/csa">CSA</a></li>
+        <li class="nav-item"><a href="https://taykimmy.github.io/CSA_Repo/blogs">Blogs</a></li>
+        <li class="nav-item"><a href="{{ site.github.repository_url }}#readme">View On GitHub</a></li>
       </ul>
     </nav>
   </div><!-- end header -->
