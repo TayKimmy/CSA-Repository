@@ -51,13 +51,11 @@ title: Tay's Blog
             padding: 10px;
         } 
 </style>
-</html>
 
-> ## Welcome to Tay's CSA Blog
+<h1><center>Welcome to Tay's CSA Blog</center></h1>
 
->> I am a junior at Del Norte High School. I am in period 1 Mort's CSA class. 
-
-<html>
+<p1><center>I am a junior at Del Norte High School. I am in period 1 Mort's CSA class.</center></p1>
+<br>
 <div class="image-container">
  <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/70078112-a34e-43f1-95fb-e05d2131eb07" width="230">
  <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/7cd5e316-3242-453b-9ff1-852892aa1d96" height="480">
