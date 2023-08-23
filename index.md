@@ -34,13 +34,23 @@ title: Tay's Blog
             background: linear-gradient(to bottom right, #2c3e50, #34495e);
             transform: scale(1.1);
         }
-        .image-container {
-            overflow: auto; /* Clear floats */
+        .image-container1 {
+            overflow: auto;
+            justify-content: center;
+            align-items: center;
         }
-        .image-container img {
+        .image-container1 img {
             float: left;
-            margin-right: 230px;
-            margin-left: 50px;
+            margin-right: 50px;
+            margin-left: 400px;
+        }
+        .image-container2 {
+            overflow: auto;
+        }
+        .image-container2 img{
+            float: left;
+            margin-top: 50px;
+            margin-left: 430px;
         }
         table {
             border: 1px solid black;
@@ -49,16 +59,51 @@ title: Tay's Blog
         }
         th, td {
             padding: 10px;
-        } 
+        }
+         .image-tooltip {
+            position: relative;
+        }
+        .image-tooltip span {
+            visibility: hidden;
+            width: 200px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        .image-tooltip:hover span {
+            visibility: visible;
+            opacity: 1;
+        }
 </style>
 
 <h1><center>Welcome to Tay's CSA Blog</center></h1>
 
 <p1><center>I am a junior at Del Norte High School. I am in period 1 Mort's CSA class.</center></p1>
 <br>
-<div class="image-container">
- <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/70078112-a34e-43f1-95fb-e05d2131eb07" width="230">
- <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/7cd5e316-3242-453b-9ff1-852892aa1d96" height="480">
+<div class="image-container1">
+    <div class="image-tooltip">
+        <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/70078112-a34e-43f1-95fb-e05d2131eb07" width="250">
+        <span>Image 1</span>
+    </div>
+    <div class="image-tooltip">
+        <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/38c13a81-ce08-4f3c-9985-ade8e61a773e" width="250">
+        <span>Image 2</span>
+    </div>
+</div>
+<div class="image-container2">
+    <div class="image-tooltip">
+        <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/7cd5e316-3242-453b-9ff1-852892aa1d96" height="480">
+        <span>Image 3</span>
+    </div>
 </div>
 <br>
 <h1 style="margin-left: 40px"><center>Class Schedule</center></h1>
