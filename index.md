@@ -60,7 +60,7 @@ title: Tay's Blog
         th, td {
             padding: 10px;
         }
-         .image-tooltip {
+        .image-tooltip {
             position: relative;
         }
         .image-tooltip span {
@@ -91,17 +91,17 @@ title: Tay's Blog
 <br>
 <div class="image-container1">
     <div class="image-tooltip">
-        <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/70078112-a34e-43f1-95fb-e05d2131eb07" width="250">
+        <img src="images/freeform.PNG" width="250">
         <span>Image 1</span>
     </div>
     <div class="image-tooltip">
-        <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/38c13a81-ce08-4f3c-9985-ade8e61a773e" width="250">
+        <img src="images/tools.PNG" width="250">
         <span>Image 2</span>
     </div>
 </div>
 <div class="image-container2">
     <div class="image-tooltip">
-        <img src="https://github.com/TayKimmy/CSA_Repo/assets/107821010/7cd5e316-3242-453b-9ff1-852892aa1d96" height="480">
+        <img src="images/cool.jpg" height="480">
         <span>Image 3</span>
     </div>
 </div>
