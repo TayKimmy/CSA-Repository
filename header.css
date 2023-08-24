@@ -48,3 +48,21 @@ li.nav-item a.back:hover {
     transform: scale(1.2);
     transition: transform 0.2s;
 }
+ table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+ }
+
+ td, th{
+    border: 1px solid #02d9ff00;
+    text-align: left;
+    padding: 8px;
+ }
+ tr:nth-child(even){
+    background-color: #00c8ff00;
+}
+
+body{
+    padding: 100px;
+}
