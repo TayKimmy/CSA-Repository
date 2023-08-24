@@ -55,33 +55,69 @@ title: Tay's Blog
         table {
             border: 1px solid black;
             margin: 0 auto;
-            width: 70%; /* Adjust the width as needed */
+            width: 70%;
         }
         th, td {
             padding: 10px;
         }
-        .image-tooltip {
+        .content_img{
             position: relative;
+            float: left;
         }
-        .image-tooltip span {
-            visibility: hidden;
-            width: 200px;
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            border-radius: 5px;
-            padding: 5px;
+        .content_img div{
             position: absolute;
-            z-index: 1;
-            bottom: 100%;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: 0;
+            right: 0;
+            background: black;
+            color: white;
+            font-family: sans-serif;
             opacity: 0;
-            transition: opacity 0.3s;
+            visibility: hidden;
+            -webkit-transition: visibility 0s, opacity 0.5s linear; 
+            transition: visibility 0s, opacity 0.5s linear;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
         }
-        .image-tooltip:hover span {
+        .content_img:hover{
+            cursor: pointer;
+        }
+        .content_img:hover div{
+            width: 200px;
+            height: 100px;
+            padding: 2px;
             visibility: visible;
-            opacity: 1;
+            opacity: 0.7; 
+        }
+        .content_img1{
+            position: relative;
+            float: left;
+        }
+        .content_img1 div{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            background: white;
+            color: black;
+            font-family: sans-serif;
+            opacity: 0;
+            visibility: hidden;
+            -webkit-transition: visibility 0s, opacity 0.5s linear; 
+            transition: visibility 0s, opacity 0.5s linear;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .content_img1:hover{
+            cursor: pointer;
+        }
+        .content_img1:hover div{
+            width: 250px;
+            padding: 2px;
+            visibility: visible;
+            opacity: 0.9; 
         }
 </style>
 
@@ -90,19 +126,19 @@ title: Tay's Blog
 <p1><center>I am a junior at Del Norte High School. I am in period 1 Mort's CSA class.</center></p1>
 <br>
 <div class="image-container1">
-    <div class="image-tooltip">
+    <div class="content_img">
         <img src="images/freeform.PNG" width="250">
-        <span>Image 1</span>
+        <div>About Me! Love playing sports (running) and hanging out with family and friends.</div>
     </div>
-    <div class="image-tooltip">
+    <div class="content_img">
         <img src="images/tools.PNG" width="250">
-        <span>Image 2</span>
+        <div>I Love My Tools! Super helpful - Google, VSCode, Java, Python, Jupyter, WSL, Ubuntu</div>
     </div>
 </div>
 <div class="image-container2">
-    <div class="image-tooltip">
+    <div class="content_img1">
         <img src="images/cool.jpg" height="480">
-        <span>Image 3</span>
+        <div>IDK, cool image</div>
     </div>
 </div>
 <br>
