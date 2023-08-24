@@ -1,3 +1,55 @@
+<style>
+  *{
+    font-family: 'Kalam', cursive;
+}
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 10px solid #e7e7e7;
+    background: linear-gradient(to bottom right, #13e486, #2ac4df);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}
+
+li.nav-item {
+    float: left;
+    margin: 0;
+}
+
+li.nav-item a {
+    padding: 0 1.5rem;
+    display: block;
+    color: rgb(39, 12, 244);
+    text-align: center;
+    text-decoration: none;
+}
+
+li.nav-item a:hover:not(.active) {
+    background-color: #ddd;
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+
+li.nav-item a.active {
+    color: white;
+    background-color: #484f93;
+}
+
+li.nav-item a.back {
+    color: rgb(32, 14, 237);
+    background-color: white;
+}
+
+li.nav-item a.back:hover {
+    background-color: #4f538b;
+    transform: scale(1.2);
+    transition: transform 0.2s;
+}
+</style>
 <span class="read-time" title="Estimated read time">
     {% assign words = content | strip_html | number_of_words %}
     {% if words < 120 %}
