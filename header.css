@@ -55,14 +55,15 @@ li.nav-item a.back:hover {
  }
 
  td, th{
-    border: 1px solid #02d9ff00;
+    border: 1px solid #0edaf5;
     text-align: left;
     padding: 8px;
  }
  tr:nth-child(even){
-    background-color: #00c8ff00;
+    background-color: #0eb0f5;
 }
 
 body{
     padding: 100px;
+    align-items: center;
 }

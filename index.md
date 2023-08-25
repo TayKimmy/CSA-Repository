@@ -120,10 +120,10 @@ title: Tay's Blog
             opacity: 0.9; 
         }
 </style>
+<body>
+<h1>Welcome to Tay's CSA Blog</h1>
 
-<h1><center>Welcome to Tay's CSA Blog</center></h1>
-
-<p1><center>I am a junior at Del Norte High School. I am in period 1 Mort's CSA class.</center></p1>
+<p1>I am a junior at Del Norte High School. I am in period 1 Mort's CSA class.</p1>
 <br>
 <div class="image-container1">
     <div class="content_img">
@@ -142,8 +142,9 @@ title: Tay's Blog
     </div>
 </div>
 <br>
-<h1 style="margin-left: 40px"><center>Class Schedule</center></h1>
-<center><table border="1" style="text-align: center;">
+<h1 style="margin-left: 40px">Class Schedule</h1>
+</body>
+<table border="1" style="text-align: center;">
     <tr>
         <th>Period</th>
         <th>Class</th>
@@ -174,9 +175,9 @@ title: Tay's Blog
         <td>Offroll</td>
         <td></td>
     </tr>
-</table></center>
+</table>
 <br>
-<h1><center>Calculator</center></h1>
+<h1>Calculator</h1>
 <div id="calculator">
     <div id="display">0</div>
     <button onclick="appendToDisplay('7')">7</button>
