@@ -1,5 +1,6 @@
 ---
-layout: calculator
+layout: default
+permalink: /calculator
 title: JS Calculator
 ---
 <html>
