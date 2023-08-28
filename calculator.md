@@ -2,6 +2,8 @@
 layout: default
 permalink: /calculator
 title: JS Calculator
+courses: { csa: {week: 1} }
+type: tangibles
 ---
 <html>
 <style>
