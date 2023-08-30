@@ -6,7 +6,7 @@ courses: {csa: {week: 2} }
 type: hacks
 ---
 
-{% include nav_frontend.html %}
+<!--{% include nav_frontend.html %}-->
 
 {% comment %}
 Conway's Game of Life https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
