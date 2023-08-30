@@ -62,7 +62,7 @@ title: Schedule
         <tr>
             <td>1</td>
             <td><a href="#"></a></td>
-            <td><a href="https://taykimmy.github.io/CSA_Repo/2023/08/22/Linux_IPYNB_2_.htm">Linux Hacks</a><br><a href="https://taykimmy.github.io/CSA_Repo/2023/08/23/Java_IPYNB_2_.html">Java Hello</a></td>
+            <td><a href="https://taykimmy.github.io/CSA_Repo/2023/08/22/Linux_IPYNB_2_.html">Linux Hacks</a><br><a href="https://taykimmy.github.io/CSA_Repo/2023/08/23/Java_IPYNB_2_.html">Java Hello</a></td>
             <td><a href="https://github.com/realethantran/ethan_student/issues/1">Week 0 & 1 Ticket</a></td>
         </tr>
         <tr>
