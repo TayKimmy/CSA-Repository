@@ -1,5 +1,4 @@
 ---
-comments: True
 layout: post
 title: Java Console Game
 description: Creating a game in Java

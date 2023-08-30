@@ -1,5 +1,4 @@
 ---
-comments: True
 title: Linux and Bash Hacks
 description: Hacks for Linux and Bash
 layout: post
