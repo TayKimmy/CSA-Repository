@@ -56,18 +56,18 @@ title: Schedule
         <tr>
             <td>0</td>
             <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
+            <td><a href="https://taykimmy.github.io/CSA_Repo/2023/08/18/Hacks0.html">Week 0 Hacks</a></td>
             <td><a href="https://github.com/realethantran/ethan_student/issues/1">Week 0 & 1 Ticket</a></td>
         </tr>
         <tr>
             <td>1</td>
             <td><a href="#"></a></td>
-            <td><a href="#"></a></td>
+            <td><a href="https://taykimmy.github.io/CSA_Repo/2023/08/22/Linux_IPYNB_2_.htm">Linux Hacks</a><br><a href="https://taykimmy.github.io/CSA_Repo/2023/08/23/Java_IPYNB_2_.html">Java Hello</a></td>
             <td><a href="https://github.com/realethantran/ethan_student/issues/1">Week 0 & 1 Ticket</a></td>
         </tr>
         <tr>
             <td>2</td>
-            <td><a href="#"></a></td>
+            <td><a href="https://taykimmy.github.io/CSA_Repo/2023/08/28/Week2-Plans.html">Week 2 Plans</a></td>
             <td><a href="#"></a></td>
             <td><a href="#">Week 2 Ticket</a></td>
         </tr>
