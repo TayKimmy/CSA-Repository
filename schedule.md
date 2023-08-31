@@ -68,7 +68,7 @@ title: Schedule
         <tr>
             <td>2</td>
             <td><a href="https://taykimmy.github.io/CSA_Repo/2023/08/28/Week2-Plans.html">Week 2 Plans</a></td>
-            <td><a href="#"></a></td>
+            <td><a href="https://taykimmy.github.io/CSA_Repo/2023/08/29/Java-console-game_IPYNB_2_.html">Java Console Game</a><br><a href="https://taykimmy.github.io/CSA_Repo/2022/07/08/PBL-FE-snake.html">Snake</a><br><a href="https://taykimmy.github.io/CSA_Repo/2022/07/08/PBL-FE-life.html">Game of Life</a><br><a href="https://taykimmy.github.io/CSA_Repo/2023/08/23/javascript-calculator.html">Calculator</a></td>
             <td><a href="#">Week 2 Ticket</a></td>
         </tr>
         <tr>
