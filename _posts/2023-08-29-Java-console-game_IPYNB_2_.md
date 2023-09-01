@@ -6,7 +6,7 @@ courses: {'csa': {'week': 2}}
 type: hacks
 ---
 
-```Java
+```java
 import java.util.Scanner;         // Import Scanner class for input
 import java.util.Random;          // Import Random class for generating random numbers
 import java.io.File;              // Import File class
@@ -25,9 +25,9 @@ public class HangmanGame {    // Define class
         // Select a random secret word from the dictionary
         String secretWord = getRandomWord(dictionary, random);
         
-        StringBuilder guessedWord = new StringBuilder();
-        for (int i = 0; i < secretWord.length(); i++) {
-            guessedWord.append("_");
+        StringBuilder guessedWord = new StringBuilder(); // allows mutable string
+        for (int i = 0; i < secretWord.length(); i++) { // length of secretWord
+            guessedWord.append("_"); // guessedWord starts with all underscores
         }
 
         int maxAttempts = 6;       
