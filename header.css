@@ -7,7 +7,7 @@ ul.navbar {
     padding: 0;
     overflow: hidden;
     border: 10px solid #e7e7e7;
-    background: linear-gradient(to bottom right, #13e486, #2ac4df);
+    background: #C31862;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,33 +21,26 @@ li.nav-item {
 
 li.nav-item a {
     padding: 0 1.5rem;
-    display: block;
-    color: rgb(39, 12, 244);
+    color: rgb(256, 256, 256);
     text-align: center;
     text-decoration: none;
+    position: relative;
 }
 
-li.nav-item a:hover:not(.active) {
-    background-color: #ddd;
-    transform: scale(1.1);
-    transition: transform 0.2s;
+li.nav-item a:hover(.active) {
+        background:#C31862;
 }
 
-li.nav-item a.active {
-    color: white;
-    background-color: #484f93;
+li.nav-item a:hover:not(.active)::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background-color: blue;
 }
 
-li.nav-item a.back {
-    color: rgb(32, 14, 237);
-    background-color: white;
-}
-
-li.nav-item a.back:hover {
-    background-color: #4f538b;
-    transform: scale(1.2);
-    transition: transform 0.2s;
-}
  table{
     font-family: arial, sans-serif;
     border-collapse: collapse;
