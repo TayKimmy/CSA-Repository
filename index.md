@@ -9,7 +9,7 @@ title: Tay's Blog
             margin: 0 auto;
             padding: 20px;
             border-radius: 10px;
-            background: linear-gradient(to bottom right, #31B7C2, #7BC393);
+            background: linear-gradient(to bottom right, #8F1D54, #C31862);
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
             text-align: center;
         }

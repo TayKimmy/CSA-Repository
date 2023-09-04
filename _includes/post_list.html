@@ -1,51 +1,96 @@
 <style>
-ul.navbar {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    border: 10px solid #e7e7e7;
-    background: linear-gradient(to bottom right, #13e486, #2ac4df);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6rem;
-}
-
-li.nav-item {
-    float: left;
-    margin: 0;
-}
-
-li.nav-item a {
-    padding: 0 1.5rem;
-    display: block;
-    color: rgb(39, 12, 244);
-    text-align: center;
-    text-decoration: none;
-}
-
-li.nav-item a:hover:not(.active) {
-    background-color: #ddd;
-    transform: scale(1.1);
-    transition: transform 0.2s;
-}
-
-li.nav-item a.active {
-    color: white;
-    background-color: #484f93;
-}
-
-li.nav-item a.back {
-    color: rgb(32, 14, 237);
-    background-color: white;
-}
-
-li.nav-item a.back:hover {
-    background-color: #4f538b;
-    transform: scale(1.2);
-    transition: transform 0.2s;
-}
+    * {
+        font-family: 'Kalam', cursive;
+        margin: 0;
+        padding: 0;
+        color: white;
+    }
+    
+    ul.navbar {
+        background: #8F1D54;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 6rem;
+        position: relative;
+    }
+    
+    ul.navbar::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1rem;
+        background: #8F1D54;
+    }
+    
+    li.nav-item {
+        float: left;
+        margin: 0;
+    }
+    
+    li.nav-item a {
+        padding: 0 1.5rem;
+        color: rgb(256, 256, 256);
+        text-align: center;
+        text-decoration: none;
+        position: relative;
+        transition: color 0.2s;
+        background-color: transparent;
+    }
+    
+    li.nav-item a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 2px;
+        background-color: blue;
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.2s;
+    }
+    
+    li.nav-item a:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+    
+    li.nav-item a.active {
+        color: white;
+        background-color: #484f93;
+    }
+    
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.3); 
+    }
+    
+    td, th {
+        border: 2px solid white;
+        border-style: groove;
+        text-align: left;
+        padding: 8px;
+        color: white;
+    }
+    
+    tr:nth-child(even) {
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    tr:nth-child(odd) {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+    
+    body {
+        padding: 100px;
+        align-items: center;
+        background: linear-gradient(to bottom, #8F1D54, #C31862, #282C4A, #282539);
+    }
 </style>
 <div class="Box box-shadow-medium rounded-1 col-12">
     <div class="col-8 d-table-cell p-3">

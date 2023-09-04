@@ -1,7 +1,11 @@
 <style>
     * {
         font-family: 'Kalam', cursive;
+        margin: 0;
+        padding: 0;
+        color: white;
     }
+    
     ul.navbar {
         list-style-type: none;
         margin: 0;
@@ -68,26 +72,29 @@
         font-family: arial, sans-serif;
         border-collapse: collapse;
         width: 100%;
+        background-color: rgba(0, 0, 0, 0.3); 
     }
     
     td, th {
-        border: 1px solid #0cb8a6;
+        border: 2px solid white;
+        border-style: groove;
         text-align: left;
         padding: 8px;
+        color: white;
     }
     
     tr:nth-child(even) {
-        background-color: #0fe7bf;
+        background-color: rgba(0, 0, 0, 0.2);
     }
     
     tr:nth-child(odd) {
-        background-color: lightgrey;
+        background-color: rgba(0, 0, 0, 0.3);
     }
     
     body {
         padding: 100px;
         align-items: center;
-        background: linear-gradient(to bottom, #8F1D54, #8F1D54, #C31862, #C31862);
+        background: linear-gradient(to bottom, #8F1D54, #C31862, #282C4A, #282539);        
     }
   </style>
   {% capture tocWorkspace %}
