@@ -2,7 +2,7 @@
 layout: post
 title: FRQ Mini-Lab
 description: Answering Collegeboard FRQ Questions
-courses: {'csa': {'week': 4}}
+courses: {'csa': {'week': 5}}
 type: hacks
 ---
 
@@ -17,7 +17,7 @@ Information about the book title and price must be maintained in the `Book` clas
 The `Textbook` class contains an additional method, `canSubstituteFor`, which returns `true` if a `Textbook` is a valid substitue for another `Textbook` and returns `false` otherwise. The current `Textbook` is a valid substitute for the `Textbook` referenced by the parameter of the `canSubstituteFor` method if the two `Textbook` objects have the same title and if the edition of the current `Textbook` is greater than or equal to the edition of the parameter.
 
 
-```Java
+```java
 public class Book {
     /** The title of the book */
     private String title;
@@ -135,7 +135,7 @@ I could've done better on this test if I understood the concept of inheritances 
 ## Corrected Code
 
 
-```Java
+```java
 public class Book {
     /** The title of the book */
     private String title;
