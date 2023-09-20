@@ -8,36 +8,36 @@ type: tangibles
 <html>
 <style>
     #calculator {
-            width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-            border-radius: 10px;
-            background: linear-gradient(to bottom right, #8F1D54, #C31862);
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-            text-align: center;
-        }
-        #display {
-            font-size: 32px;
-            margin-bottom: 15px;
-            color: white;
-        }
-        button {
-            width: 80px;
-            height: 80px;
-            font-size: 24px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            background: white;
-            color: black;
-            cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        button:hover {
-            background: linear-gradient(to bottom right, #2c3e50, #34495e);
-            transform: scale(1.1);
-        }
+        width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+        background: linear-gradient(to bottom right, #292b2c, #121212); 
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+    }
+    #display {
+        font-size: 32px;
+        margin-bottom: 15px;
+        color: white; 
+    }
+    button {
+        width: 80px;
+        height: 80px;
+        font-size: 24px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        background: #484f93;
+        color: white; 
+        transition: transform 0.2s, background-color 0.2s;
+    }
+    button:hover {
+        background: linear-gradient(to bottom right, #2c3e50, #34495e);
+        transform: scale(1.1);
+    }
 </style>
+
 <h1>Calculator</h1>
 <div id="calculator">
     <div id="display">0</div>
