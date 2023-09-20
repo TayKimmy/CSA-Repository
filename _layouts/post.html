@@ -69,6 +69,53 @@ layout: default
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
 <style>
+  ul.navbar {
+    background: #292b2c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    position: relative;
+    background: linear-gradient(to bottom right, #1c306c, #151242);
+    list-style-type: none;
+}
+  ul.navbar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1rem;
+}
+  li.nav-item {
+    float: left;
+    margin: 0;
+}
+  li.nav-item a {
+    padding: 0 1.5rem;
+    color: #3498db;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
+    background-color: transparent;
+}
+  li.nav-item a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 2px;
+    background-color: #3498db;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.2s;
+}
+  li.nav-item a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
   ul.post-content{
     background-color:black;
     margin-right:500px;
@@ -79,9 +126,6 @@ layout: default
     border: 2px solid #333;
     border-radius:15px;
     background-color:rgb(17, 12, 73);
-  }
-  p.post-meta.post-meta-title{
-    text-align: center;
   }
   pre.highlight{
     background-color: #101c3e;
@@ -96,7 +140,7 @@ layout: default
     width: 100%;
     background-color: rgba(0, 0, 0, 0.2); 
 }
-td,th {
+  td,th {
   border: 1px solid white;
   text-align: left;
   padding: 8px;
