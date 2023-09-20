@@ -6,205 +6,97 @@ courses: {'csa': {'week': 5}}
 type: hacks
 ---
 
-## Textbook Class
+## Steptracker Class
 
-You will write a class `Textbook`, which is a subclass of `Book`.
+This question involves the implementation of a fitness tracking system that is represented by the `StepTracker` class. A `StepTracker` object is created with a parameter that defines the minimum number of steps that must be taken for a day to be considered active. The `StepTracker` class provides a constructor and the following methods.
+- `addDailySteps`, which accumulates information about steps, in readings taken once per day
+- `activeDays`, which returns the number of active days
+- `averageSteps`, which returns the average number of steps per day, calculated by dividing the total number of steps by the number of days tracked
 
-A `Textbook` has an edition number, which is a positive integer used to identify different versions of the book. The `getBookInfo` method, when callsed on a `Textbook`, returns a string that also includes the edition information, as shown in the example.
+Sample code execution sequence and results:
 
-Information about the book title and price must be maintained in the `Book` class. Information about the edition must be maintained in the `Textbook` class.
-
-The `Textbook` class contains an additional method, `canSubstituteFor`, which returns `true` if a `Textbook` is a valid substitue for another `Textbook` and returns `false` otherwise. The current `Textbook` is a valid substitute for the `Textbook` referenced by the parameter of the `canSubstituteFor` method if the two `Textbook` objects have the same title and if the edition of the current `Textbook` is greater than or equal to the edition of the parameter.
-
-
-```java
-public class Book {
-    /** The title of the book */
-    private String title;
-
-    /** The price of the book */
-    private double price;
-
-    /** Creates a new Book with given title and price */
-    public Book(String bookTitle, double bookPrice) {
-        /* implementation not shown */
-    }
-
-    /* Returns title of the book */
-    public String getTitle() {
-        return title;
-    }
-    
-    /* Returns a string containing the title and price of the book */
-    public String getBookInfo() {
-        return title + "-" + price;
-    }
-}
+| Statement + Expression | Value returned | Comment |
+| - | - | - |
+| StepTracker tr = new StepTracker(10000); |  | 10000 steps is considered active |
+| tr.activeDays(); | 0 | Nothing recorded yet |
+| tr.addDailySteps(9000); |  | Too little steps to be considered active |
+| tr.activeDays(); | 0 | No day had at least 10000 steps |
+| tr.addDailySteps(12000); |  | Represents active day |
+| tr.activeDays() | 1 | 1 day had at least 10000 steps |
+| tr.averageSteps(); | 10500 | Average number of steps (21000/2) |
 
 
-public class Textbook extends Book { /* defining new subclass */
-    /** edition of the textbook */
-    private int edition;
+```Java
+public class StepTracker {
+    private int steps; // defining the amount of steps to be considered active
 
-    /** create new Textbook with given title, price, and edition */
-    public Textbook(String textbookTitle, double textbookPrice, int textbookEdition) {
-        bookTitle = textbookTitle;
-        bookPrice = textbookPrice;
-        edition = textbookEdition;
+    private int x; // defining amount of steps actually walked
+
+    private int daysActive = 0; // defining amount of active days
+
+    private int totalDays = 0; // defining amount of days
+
+    private int totalSteps = 0; // to help calculate average steps
+
+    public StepTracker(int stepsNeeded) { // create object with the parameter
+        steps = stepsNeeded;
     }
     
-    public int getEdition() { /* return instance value of the edition */
-        return edition;
+    public void addDailySteps(int stepsWalked) { // creating addDailySteps method
+        x = stepsWalked;
+        totalDays ++;
+        totalSteps = totalSteps + x;
     }
 
-    /* return string containing the title, price, and edition of the book */
-    public String getBookInfo() {
-        return title + "-" + price + "-" + edition;
-    }
-
-    public boolean canSubstituteFor(Textbook para) {
-        if (getTitle() == para.getTitle() && edition >= para.getEdition()) { /* if the edition is greater than or equal to and if titles are equal */
-            return true;
-        } else {
-            return false;
+    public int activeDays() {
+        if (x >= steps) { // if steps walked is greater than steps needed
+            daysActive ++; // add 1 active day
         }
+        return daysActive;
+    }
+
+    public double averageSteps() { // creating averageSteps method
+        return (double) totalSteps/totalDays; // return the total steps divided by total days
     }
 }
+
+public class Main { // create class for outputs
+    public static void main(String[] args) {
+        StepTracker random = new StepTracker(5000); //define steptracker with 5000 min steps
+        random.addDailySteps(3000);
+        random.addDailySteps(10000);
+        random.addDailySteps(6000);
+        System.out.println(random.activeDays());
+        System.out.println(random.averageSteps());
+    }
+}
+Main.main(null);
 ```
 
-
-    constructor Book in class Book cannot be applied to given types;
-
-      required: java.lang.String,double
-
-      found: no arguments
-
-      reason: actual and formal argument lists differ in length
-
-    
-
-    |           bookTitle = textbookTitle;
-
-    cannot find symbol
-
-      symbol:   variable bookTitle
-
-    
-
-    |           bookPrice = textbookPrice;
-
-    cannot find symbol
-
-      symbol:   variable bookPrice
-
-    
-
-    |           return title + "-" + price + "-" + edition;
-
-    title has private access in Book
-
-    
-
-    |           return title + "-" + price + "-" + edition;
-
-    price has private access in Book
-
-    
+    1
+    6333.333333333333
 
 
 ## Scoring
 
-| Point # | What I did | 0 or 1 |
-| - | - | - |
-| Point 1 | I declare class header that is not private and extends from class `Book`. | 1 |
-| Point 2 | I declare the constructor header that defines `Textbook` | 1 |
-| Point 3 | I don't use `super` for the first line | 0 |
-| Point 4 | I define the variable edition with private | 1 |
-| Point 5 | I define at least one of those headers with public | 1 |
-| Point 6 | I define `getEdition` that returns value of edition | 1 |
-| Point 7 | The `canSubstituteFor` method determiens correctly | 1 |
-| Point 8 | I don't use `super` or define `getBookInfo` | 0 |
-| Point 9 | Even though I didn't use `super`, I concatenate correctly and access `title` and `price` directly | 1 |
+| Point | What I did |
+| - | - |
+| 1 | I used private instance variables, not public. |
+| 1 | I declear header for StepTracker using public |
+| 1 | I use parameters and values to initialize variables |
+| 1 | I decleare header for addDailySteps |
+| 1 | I identify active days and increment count |
+| 1 | I update other instance variables appropriately |
+| 1 | I declare and implement activeDays |
+| 1 | I declare header for averageSteps |
+| 1 | I return calculated double average steps. |
 
-I got a 7/9 on this FRQ question #2 on class.
+I got a 9/9 on this 2019 FRQ question #2.
 
 ## Review
 
-I could've done better on this test if I understood the concept of inheritances better. I didn't know about the `super` keyword.
-
-## Corrected Code
-
-
-```java
-public class Book {
-    /** The title of the book */
-    private String title;
-
-    /** The price of the book */
-    private double price;
-
-    /** Creates a new Book with given title and price */
-    public Book(String bookTitle, double bookPrice) {
-        title = bookTitle;
-        price = bookPrice;
-    }
-
-    /* Returns title of the book */
-    public String getTitle() {
-        return title;
-    }
-    
-    /* Returns a string containing the title and price of the book */
-    public String getBookInfo() {
-        return title + "-" + price;
-    }
-}
-
-
-public class Textbook extends Book { /* defining new subclass */
-    /** edition of the textbook */
-    private int edition;
-
-    /** create new Textbook with given title, price, and edition */
-    public Textbook(String textbookTitle, double textbookPrice, int textbookEdition) {
-        super(textbookTitle, textbookPrice);
-        edition = textbookEdition;
-    }
-    
-    public int getEdition() { /* return instance value of the edition */
-        return edition;
-    }
-
-    public boolean canSubstituteFor(Textbook para) {
-        if (getTitle() == para.getTitle() && edition >= para.getEdition()) { /* if the edition is greater than or equal to and if titles are equal */
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    public String getBookInfo() {
-        return super.getBookInfo() + "-" + edition;
-    }
-}
-
-public class Main { // defining new class to create object instance
-    public static void main(String[] args) {
-        Textbook calc = new Textbook("Calculus", 119.25, 6);
-        System.out.println(calc.getEdition());
-        System.out.println(calc.getBookInfo());
-        Textbook physics15 = new Textbook("Physics", 89.50, 9);
-        System.out.println(calc.canSubstituteFor(physics15));
-        Textbook calc26 = new Textbook("Calculus", 234.75, 12);
-        System.out.println(calc26.canSubstituteFor(calc));
-    }
-}
-Main.main(null);
-
-```
-
-    6
-    Calculus-119.25-6
-    false
-    true
-
+Although I got all the points, there are a few ways I can improve my code.
+1. Don't set the variables equal to 0 in the beginning, but instead, within the addDailySteps function
+2. Perform if loop inside addDailySteps function
+3. Mainly just clean up code and make it perform more effectively
+4. Make sure to add that if total days is 0, to return 0 for average steps otherwise error will pop up.
