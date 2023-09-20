@@ -1,14 +1,12 @@
 * {
     font-family: 'Kalam', cursive;
-    margin: 0;
-    padding: 0;
     color: white;
     cursor: url(https://github.com/TayKimmy/CSA_Repo/assets/107821010/d3f6312f-f199-447a-b52b-9de06bd92805), auto;
 }
 
 body {
     background-color: #060334;
-    padding: 100px;
+    padding: 40px;
     align-items: center;
 }
 
@@ -19,8 +17,8 @@ ul.navbar {
     align-items: center;
     height: 6rem;
     position: relative;
-    list-style-type: none;
     background: linear-gradient(to bottom right, #1c306c, #151242);
+    list-style-type: none;
 }
 
 ul.navbar::before {
@@ -65,11 +63,6 @@ li.nav-item a:hover::after {
     transform-origin: left;
 }
 
-li.nav-item a.active {
-    color: #fff; 
-    background-color: #484f93;
-}
-
 table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
@@ -78,17 +71,16 @@ table {
 }
 
 td, th {
-    border: 1px solid #fff; 
-    border-style: groove;
+    border: 0.5px white;
     text-align: left;
     padding: 8px;
     color: #fff;
 }
 
 tr:nth-child(even) {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: #0f0b46;
 }
 
 tr:nth-child(odd) {
-    background-color: rgba(156, 154, 154, 0.2); 
+    background-color: #060334; 
 }
