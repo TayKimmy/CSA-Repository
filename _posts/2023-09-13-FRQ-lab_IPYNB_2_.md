@@ -93,10 +93,84 @@ Main.main(null);
 
 I got a 9/9 on this 2019 FRQ question #2.
 
-## Review
+## Review/Improvements
 
 Although I got all the points, there are a few ways I can improve my code.
 1. Don't set the variables equal to 0 in the beginning, but instead, within the addDailySteps function
 2. Perform if loop inside addDailySteps function
 3. Mainly just clean up code and make it perform more effectively
 4. Make sure to add that if total days is 0, to return 0 for average steps otherwise error will pop up.
+
+
+```Java
+import java.util.Scanner;
+
+public class StepTracker {
+    private int steps; // defining the amount of steps to be considered active
+
+    private int totalSteps; // defining amount of steps actually walked
+
+    private int daysActive; // defining amount of active days
+
+    private int totalDays; // defining amount of days
+
+    public StepTracker(int stepsNeeded) { // create object with the parameter
+        steps = stepsNeeded;
+        daysActive = 0;
+        totalDays = 0; // initalizing all variables inside StepTracker instead of outside
+        totalSteps = 0;
+    }
+    
+    public void addDailySteps(int stepsWalked) { // creating addDailySteps method
+        totalDays ++;
+        totalSteps += stepsWalked;
+        if (totalSteps >= steps) { // if steps walked is greater than steps needed
+            daysActive ++; // add 1 active day
+        }
+    }
+
+    public int activeDays() {
+        return daysActive;
+    }
+
+    public double averageSteps() { // creating averageSteps method
+        if (totalDays == 0) { // adding if loop so that if totalDays is 0, it just returns 0 instead of error
+            return 0.0;
+        } else {
+        return (double) totalSteps/totalDays; // return the total steps divided by total days
+        }
+    }
+
+    public double goalAchievementPercentage(int goal) { // adding something exra - percentage of steps reached
+        if (steps == 0) {
+            return 0.0;
+        }
+        return (double) totalSteps / goal * 100; // return how much of the steps needed the person has walked
+    }
+}
+
+public class Main { // create class for outputs
+    public static void main(String[] args) {
+        StepTracker first = new StepTracker(5000); //define steptracker with 5000 min steps
+        first.addDailySteps(3000);
+        first.addDailySteps(10000);
+        first.addDailySteps(6000);
+        
+        System.out.println("Active Days: " + first.activeDays());
+        System.out.println("Average Steps: " + first.averageSteps());
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter your goal:");
+        int goal = input.nextInt();
+        System.out.println("");
+        System.out.println("Goal Achievement Percentage: " + first.goalAchievementPercentage(goal));
+    }
+}
+Main.main(null);
+```
+
+    Active Days: 2
+    Average Steps: 6333.333333333333
+    Enter your goal:
+    Goal Achievement Percentage: 95.0
+
