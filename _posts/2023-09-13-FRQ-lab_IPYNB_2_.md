@@ -77,6 +77,11 @@ Main.main(null);
     6333.333333333333
 
 
+
+```Java
+
+```
+
 ## Scoring
 
 | Point | What I did |
@@ -100,6 +105,11 @@ Although I got all the points, there are a few ways I can improve my code.
 2. Perform if loop inside addDailySteps function
 3. Mainly just clean up code and make it perform more effectively
 4. Make sure to add that if total days is 0, to return 0 for average steps otherwise error will pop up.
+
+### New Method
+`goalAchievementPercentage` method:
+- Takes in user input - method takes in this input as a parameter
+- Returns the total steps walked divided by the goal multiplied by a hundred (to make it a percent not a decimal)
 
 
 ```Java
@@ -162,8 +172,7 @@ public class Main { // create class for outputs
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your goal:");
         int goal = input.nextInt();
-        System.out.println("");
-        System.out.println("Goal Achievement Percentage: " + first.goalAchievementPercentage(goal));
+        System.out.println("\nGoal Achievement Percentage: " + first.goalAchievementPercentage(goal) + "%");
     }
 }
 Main.main(null);
@@ -172,5 +181,5 @@ Main.main(null);
     Active Days: 2
     Average Steps: 6333.333333333333
     Enter your goal:
-    Goal Achievement Percentage: 95.0
+    Goal Achievement Percentage: 95.0%
 
