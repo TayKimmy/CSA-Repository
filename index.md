@@ -115,11 +115,6 @@ title: Tay's Blog
 </style>
 <body>
 <h1>Welcome to Tay's CSA Blog</h1>
-
-<img src="https://github.com/lunaiwa/student-template/assets/111661543/e6ac3bc6-9544-4249-8b51-fde6d0e5ca3d" alt="il bella">
-<img src="https://github.com/lunaiwa/student-template/assets/111661543/029db326-00e6-49c7-888a-ec975f0d8126" alt="belllalalalal">
-
-
 <p1>I am a junior at Del Norte High School. I am in period 1 Mort's CSA class.</p1>
 <br>
 <div class="image-container1">
