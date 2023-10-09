@@ -26,7 +26,7 @@ Sample code execution sequence and results:
 | tr.averageSteps(); | 10500 | Average number of steps (21000/2) |
 
 
-```Java
+```java
 public class StepTracker {
     private int steps; // defining the amount of steps to be considered active
 
@@ -78,7 +78,7 @@ Main.main(null);
 
 
 
-```Java
+```java
 
 ```
 
@@ -98,7 +98,9 @@ Main.main(null);
 
 I got a 9/9 on this 2019 FRQ question #2.
 
-## Review/Improvements
+---
+
+## My Review/Improvements
 
 Although I got all the points, there are a few ways I can improve my code.
 1. Don't set the variables equal to 0 in the beginning, but instead, within the addDailySteps function
@@ -111,12 +113,21 @@ Although I got all the points, there are a few ways I can improve my code.
 - Takes in user input - method takes in this input as a parameter
 - Returns the total steps walked divided by the goal multiplied by a hundred (to make it a percent not a decimal)
 
+---
 
-```Java
+## ChatGPT Review
+
+- Rename variable `x` to be more specific
+- Rename variable `steps` to be more specific
+- Add input validation
+- Add more comments
+
+
+```java
 import java.util.Scanner;
 
 public class StepTracker {
-    private int steps; // defining the amount of steps to be considered active
+    private int stepsThreshold; // defining the amount of steps to be considered active
 
     private int totalSteps; // defining amount of steps actually walked
 
@@ -125,22 +136,22 @@ public class StepTracker {
     private int totalDays; // defining amount of days
 
     public StepTracker(int stepsNeeded) { // create object with the parameter
-        steps = stepsNeeded;
+        stepsThreshold = stepsNeeded;
         daysActive = 0;
         totalDays = 0; // initalizing all variables inside StepTracker instead of outside
         totalSteps = 0;
     }
     
     public void addDailySteps(int stepsWalked) { // creating addDailySteps method
-        totalDays ++;
-        totalSteps += stepsWalked;
-        if (totalSteps >= steps) { // if steps walked is greater than steps needed
+        totalDays ++; // incrment total days by 1 each time
+        totalSteps += stepsWalked; // add the daily steps to total steps
+        if (totalSteps >= stepsThreshold) { // if steps walked is greater than steps needed
             daysActive ++; // add 1 active day
         }
     }
 
-    public int activeDays() {
-        return daysActive;
+    public int activeDays() { // method for how many active days
+        return daysActive; 
     }
 
     public double averageSteps() { // creating averageSteps method
@@ -152,7 +163,7 @@ public class StepTracker {
     }
 
     public double goalAchievementPercentage(int goal) { // adding something exra - percentage of steps reached
-        if (steps == 0) {
+        if (stepsThreshold == 0) { // if their goal is 0, just return 0
             return 0.0;
         }
         return (double) totalSteps / goal * 100; // return how much of the steps needed the person has walked
