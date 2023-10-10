@@ -1,8 +1,7 @@
 ---
-toc: True
 layout: post
-title: U1 Lesson - Object classes
-cousrses: {'csa': {'week': 6}}
+title: U2 Lesson - Object classes
+courses: {'csa': {'week': 6}}
 type: hacks
 ---
 
