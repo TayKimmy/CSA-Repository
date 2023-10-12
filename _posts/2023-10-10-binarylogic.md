@@ -2,7 +2,7 @@
 layout: post
 title: U3 Boolean Logic
 description: Lesson on boolean logics!
-courses: {csa: {week: 7}}
+courses: {csa: {week: 8}}
 type: hacks
 ---
 
