@@ -45,6 +45,7 @@ Load all posts with site
     <th>Plans</th>
     <th>Hacks</th>
     <th>Tangibles</th>
+    <th>Lessons</th>
   </tr>
 
   {%comment%} 
@@ -63,6 +64,7 @@ Load all posts with site
     {% assign plans = null | compact %}
     {% assign hacks = null | compact %}
     {% assign tangibles = null | compact %}
+    {% assign lessons = null | compact %}
 
 
   {%comment%} 
@@ -95,6 +97,9 @@ Load all posts with site
           {% elsif post.type == "tangibles" %}
               {% assign tangibles = tangibles | unshift: title %}
               {% assign tangibles = tangibles | unshift: url %} 
+          {% elsif post.type == "lessons" %}
+              {% assign lessons = lessons | unshift: title %}
+              {% assign lessons = lessons | unshift: url %} 
           {% else %}
               {% assign uk = uk | unshift: title %}
               {% assign uk = uk | unshift: url %}     
@@ -107,7 +112,7 @@ Load all posts with site
   {%comment%} 
   <!-- ordering units and inserting column delimiters -->
   {%endcomment%}
-  {% assign units = units | concat:plans | concat:deli | concat:hacks | concat:deli | concat:tangibles%}
+  {% assign units = units | concat:plans | concat:deli | concat:hacks | concat:deli | concat:tangibles | concat: deli | concat:lessons%}
 
   {%comment%} 
   <!-- This Loop is maximum iterationss, since elements are pairs it will decrement a extra times at the end -->
