@@ -1,9 +1,8 @@
 ---
-comments: True
 layout: post
 title: U1 Lesson - Types
-type: hacks
-courses: {'csa': {'week': 6}}
+type: lessons
+courses: {'csa': {'week': 7}}
 authors: Colin, Aaron, Quinn, Haoxuan, Vinay
 ---
 
@@ -37,6 +36,7 @@ A Variable is a name given to a memory location that is holding the specified va
 
 
 
+
 ```Java
 int primitive5;
 primitive4 = 1;
@@ -44,16 +44,6 @@ primitive4 = 1;
 //Or...
 int primitive6 = 1;
 ```
-
-
-    |   primitive4 = 1;
-
-    cannot find symbol
-
-      symbol:   variable primitive4
-
-    
-
 
 What are the greatest values integers and doubles can store?
 
