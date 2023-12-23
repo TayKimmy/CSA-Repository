@@ -303,7 +303,8 @@ JwtGenerator.main(null);
 <h1> JWT with Spring Boot </h1>
 
 <h2> Big Idea </h2>
-<img alt="JWTProcess" src="{{site.baseurl}}/images/JwtProcess.png">
+
+<img alt="JWTProcess" src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/9e38ec32-6d47-4f9d-90df-5bb40101a65b">
 
 1. JwtAuthFilter is executed first (validates and checks JWT Tokens)
     - Internal check to check if the token is there or not. 
@@ -323,7 +324,8 @@ JwtGenerator.main(null);
     - Sends http 200
 
 Here is a diagram that makes it easier to understand the process tha happens between JWT and the API calls. 
-<img alt="JWTApi" src="{{site.baseurl}}/images/JwtAPI.png">
+<br>
+<img alt="JWTApi" src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/431bc0fb-a8da-4a3e-86da-4c3935a87825">
 
 - User posts with their login information
 - server does authentication to confirm the user
@@ -331,6 +333,9 @@ Here is a diagram that makes it easier to understand the process tha happens bet
 - Now every time the user sends a request, the cookie with that corresponding ID gets send to the server which verifies the ID and sends back a response.
 
 Popcorn Hack: Create your own diagram to help visualize the JWT process
+
+#### My diagram
+<img alt="JWTDiagram" src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/b68bebe3-75a0-4d21-b0bd-97e22b5aaded">
 
 <h2> JWT Walkthrough </h2>
 - Clone this repo and follow along in each JWT file: https://github.com/vivianknee/jwtlessonBackend.git
@@ -375,16 +380,16 @@ There are a few different options for storing a JWT in a JavaScript application:
 
 ## Postman 
 1. Trying to access /api/person/ without jwt token stored in Cookies
-- <img alt="nojwt" src="{{site.baseurl}}/images/nojwt.png">
+- <img alt="nojwt" src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/1d63301b-c514-4c72-a670-2237fcb64846">
 
 2. Trying to access /api/person/ with a wrong jwt token stored in Cookies
-- <img alt="wrongjwt" src="{{site.baseurl}}/images/wrongjwt.png">
+- <img alt="wrongjwt" src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/97eef36d-30d3-4bbf-9946-7eb068594c72">
 
 3. Trying to access /api/person/ with a jwt token that does not have the signature
-- <img alt="nosignature" src="{{site.baseurl}}/images/nosignature.png">
+- <img alt="nosignature" src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/15d75747-423d-409b-85f7-cc74c5f915c6">
 
 4. Accessing /api/person/ with generated jwt token stored in Cookies header
-- <img alt="yes" src="{{site.baseurl}}/images/yes.png">
+- <img alt="yes" src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/072c650f-5827-4917-a9e3-a3d667aafc85">
 
 ## Implementation Approaches and Security Considerations
 
@@ -471,6 +476,11 @@ Additional Security Considerations
 ## Hacks
 1. Implementation 
 - Implement a simple authentication system using JWT with Java. Show how JWT works with postman. Get the request to be authorized
+
+Accessing with JWT token stored in cookies.
+<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/ae151156-1456-4814-8fcf-660c874cd5a5">
+I used my own backend instead of cloning the lesson one. 
+
 
 2. MC Knowledge test (5) 
     - Which part of the JWT contains the actual data (claims)? 
