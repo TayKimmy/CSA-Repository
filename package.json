@@ -1,0 +1,20 @@
+{
+  "name": "CSA-Repository",
+  "version": "1.0.0",
+  "description": "> This site is intended for Students.   This is to record plans, complete hacks, and do work for your learnings. - This can be customized to support computer science as you work through pathway (JavaScript, Python/Flask, Java/Spring) - All tangible artifact work is in a _posts or in a _notebooks.   - Front matter (aka meta data) in ipynb and md files is used to organize information according to week and column in running web site.",
+  "main": "dotenv.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TayKimmy/CSA-Repository.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TayKimmy/CSA-Repository/issues"
+  },
+  "homepage": "https://github.com/TayKimmy/CSA-Repository#readme"
+}
