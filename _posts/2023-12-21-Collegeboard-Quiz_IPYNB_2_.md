@@ -36,7 +36,7 @@ I got a 34/39 which is a 87%.
 Here is the code for Question #25 because I had a bit of trouble figuring out why the answer was 10. I didn't know the answer so I just guessed it.
 
 
-```Java
+```java
 int count = 0;
 for (int x = 0; x < 4; x++) {
     for (int y = x; y < 4; y++) {
@@ -51,12 +51,12 @@ System.out.println(count);
 
 ## Reflections
 
-#### Improvements:
+### Improvements:
 1. Read question and the code carefully
 2. Understand what each line and each function does
 3. Make sure to study topics I struggled on
 
-#### Plans to Study:
+### Plans to Study:
 1. Review past test questions
 2. Do more Java coding
 3. Do more research on certain topics - i.e. Boolean, nested for loops, etc.
