@@ -1,7 +1,7 @@
 ---
 toc: True
 layout: post
-title: Final Lesson
+title: SASS Lesson
 description: Entire SASS Lesson.
 type: hacks
 courses: {'csa': {'week': 15}}
