@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Individual Review Blog
-description: Contains all the assest, preparations, and contributions for Collegeboard and past projects
+description: Contains all the assets, preparations, and contributions for Collegeboard and past projects
 courses: {'csa': {'week': 18}}
 type: Plans
 ---
