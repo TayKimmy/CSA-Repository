@@ -3,7 +3,7 @@ layout: post
 title: Spring POST Lesson
 description: Our Spring POST Lesson with Database Definitions.
 courses: {'csa': {'week': 18}}
-type: lesson
+type: lessons
 ---
 
 # UML Backend Diagram
