@@ -1,7 +1,7 @@
 ---
 toc: True
 comments: True
-layout: notebook
+layout: post
 title: Thymeleaf Lesson
 courses: {'csa': {'week': 19}}
 type: lessons

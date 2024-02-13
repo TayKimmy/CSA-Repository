@@ -1,7 +1,7 @@
 ---
 toc: True
 comments: True
-layout: notebook
+layout: post
 title: User Profile JavaScript/HTML Lesson
 description: HTML and Javascript of User Profiles
 courses: {'csp': {'week': 19}}
