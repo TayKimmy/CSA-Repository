@@ -72,52 +72,55 @@ layout: default
   * {
     cursor: url(https://github.com/TayKimmy/CSA_Repo/assets/107821010/d3f6312f-f199-447a-b52b-9de06bd92805), auto;
 }
-  ul.navbar {
-    background: #292b2c;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 6rem;
-    position: relative;
-    background: linear-gradient(to bottom right, #1c306c, #151242);
-    list-style-type: none;
+ul.navbar {
+  background: #292b2c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 6rem;
+  position: relative;
+  background: linear-gradient(to bottom right, #1c306c, #151242);
+  list-style-type: none;
 }
-  ul.navbar::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1rem;
+
+ul.navbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1rem;
 }
-  li.nav-item {
-    float: left;
-    margin: 0;
+
+li.nav-item {
+  float: left;
+  margin: 0;
 }
-  li.nav-item a {
-    padding: 0 1.5rem;
-    color: #3498db;
-    text-align: center;
-    text-decoration: none;
-    position: relative;
-    transition: color 0.2s;
-    background-color: transparent;
+
+li.nav-item a {
+  padding: 0 1.5rem;
+  color: #3498db;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.2s;
+  background-color: transparent;
 }
-  li.nav-item a::after {
-    margin-left: 100px;
-    margin-right: 100px;
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 100%;
-    height: 2px;
-    background-color: #3498db;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.2s;
+
+li.nav-item a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 2px;
+  background-color: #0e81ce;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s;
 }
-  li.nav-item a:hover::after {
+
+li.nav-item a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
@@ -128,16 +131,20 @@ layout: default
     margin-left: 100px;
     margin-right: 100px;
   }
+  body {
+    margin-left: 250px;
+    margin-right: 250px; 
+  }
   code.language-Java{
-    color:#3498db;
+    color:#000000;
     display:block;
     border: 2px solid #333;
     border-radius:15px;
     background-color:rgb(17, 12, 73);
   }
   pre.highlight{
-    background-color: #102765;
-    color: white;
+    background-color: #bec6f4;
+    color: black;
     display:block;
     border: 1px solid #333;
   }
