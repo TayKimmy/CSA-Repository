@@ -2,8 +2,8 @@
 toc: True
 comments: True
 layout: post
-title: Scope and Access of a Class
-description: Lesson for scope and access of a class
+title: Methods & Control Structures Lesson
+description: Lesson for methods & control structures
 type: tangibles
 courses: {'csa': {'week': 28}}
 ---
@@ -30,7 +30,7 @@ Let's dive into evaluating expressions and demonstrating program statements usin
 ### Example 1: Calculating the Hypotenuse of a Right Triangle
 
 
-```Java
+```java
 public class Triangle {
     public static void main(String[] args){
         double a = 3;
@@ -48,7 +48,7 @@ Triangle.main(null)
 ### Example 2: Finding the Larger of Two Numbers
 
 
-```Java
+```java
 public class Larger{
     public static void main(String[] args){
         double num1 = 7.25;
@@ -69,7 +69,7 @@ Math.random() is a versatile method used to generate random numbers. However, it
 ### Example: Generating a Random Integer Between 1 and 10
 
 
-```Java
+```java
 public class Generate{
     public static void main(String[] args){
         int min = 1;
@@ -125,7 +125,7 @@ Difference between Array and Arraylist:
     - Get the length of the ArrayList
 
 
-```Java
+```java
 import java.util.ArrayList;
 
 public class Test {
@@ -167,7 +167,7 @@ Test.main(null);
     - Do not delete elements in an ArrayList while using an enhanced for loop
 
 
-```Java
+```java
 public static void main(String[] args)
 {
     ArrayList<Integer> arr = new ArrayList<>();        
@@ -197,7 +197,7 @@ main(null);
 ## Built-In Sorting
 
 
-```Java
+```java
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -249,7 +249,7 @@ SelectionSort.main(null);
 ### Example
 
 
-```Java
+```java
 public class Bowler{
     private int totalPins;
     private int games;
