@@ -1,6 +1,5 @@
 ---
 toc: True
-comments: True
 layout: post
 title: Methods & Control Structures Hacks
 type: hacks
@@ -19,7 +18,7 @@ Iterating over a 2D array in Java means iterating over each element in the array
 You need to implement a method `calculateTotalScore` that takes a 2D array scores of integers representing player scores and returns the sum of all the elements in the array. Write the method signature and the method implementation. Include comments to explain your code.
 
 
-```Java
+```java
 public class Game {
     public static int calculateTotalScore(int[][] scores) {
         int totalScore = 0; // initializing the variable to store the scores
@@ -59,7 +58,7 @@ An array is a data structure that allows people to store multiple values of the 
 You need to implement a method calculateAverageGrade that takes an array grades of integers representing student grades and returns the average of all the elements in the array. Write the method signature and the method implementation. Include comments to explain your code.
 
 
-```Java
+```java
 public class Grade {
     public static double calculateAverageGrade(int[] grades) {
         int sum = 0; // initalizing variables for the sum and the count
