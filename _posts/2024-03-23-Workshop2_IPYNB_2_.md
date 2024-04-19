@@ -26,7 +26,7 @@ deposit(double amount): Deposits a given amount into the account.
 withdraw(double amount): Withdraws a given amount from the account, but only if the withdrawal amount is less than or equal to the current balance. Ensure that the balance is never negative.
 
 
-```Java
+```java
 public class BankAccount {
     private String accountHolder;
     private double balance;
@@ -82,7 +82,7 @@ BankAccount.main(null);
 A wrapper class is a class whose objects contain primitive data. They "wrap" primitive values in an object, allowed them to be passed as arguments, added to collections, etc. They allow us to represent primitive data types as objects.
 
 
-```Java
+```java
 public class Wrapper {
     public static void main(String[] args) {
         Integer num = new Integer(10); // wrapping int primitive into Integer object
@@ -107,7 +107,7 @@ Methods:
 getTemperature(): A method that returns the temperature value in Celsius. setTemperature(double value): A method that sets a new temperature value in Celsius. toFahrenheit(): A method that converts the temperature from Celsius to Fahrenheit and returns the result as a double value.
 
 
-```Java
+```java
 public class Temperature {
     private double temperatureValue;
 
@@ -156,7 +156,7 @@ Inheritance is a part of OOP that allows a subclass to inherit properties of the
 You need to implement a Java class hierarchy to represent different types of animals in the zoo. Create a superclass Animal with basic attributes and methods common to all animals, and at least three subclasses representing specific types of animals with additional attributes and methods. Include comments to explain your code, specifically how inheritance is used.
 
 
-```Java
+```java
 public class Animal { // superclass
     // common attributes
     protected String name;
