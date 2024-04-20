@@ -1,23 +1,23 @@
 ---
 toc: True
+comments: False
 layout: post
-title: Sorting Algorithms Blog
-type: tangibles
-courses: {'csa': {'week': 29}}
+title: Algorithmic Code Prep
+type: hacks
+courses: {'csa': {'week': 28}}
 ---
 
 ## Flower Class and Collectable Interface
 
 
-
-```Java
+```java
 public interface Collectable extends Comparable<Collectable> {
     String toJson();
 }
 ```
 
 
-```Java
+```java
 public class Flower implements Collectable {
     private String name;
     private int petals;
@@ -58,7 +58,7 @@ public class Flower implements Collectable {
 Creating the class that will store all the sorts as methods.
 
 
-```Java
+```java
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -171,7 +171,7 @@ public class Sorting {
 ## Testing
 
 
-```Java
+```java
 import java.util.ArrayList;
 
 public class Test {
