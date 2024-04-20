@@ -1,0 +1,21 @@
+---
+toc: True
+layout: post
+title: Alhorithmic Performance
+type: tangibles
+courses: {'csa': {'week': 29}}
+---
+
+### Performance and Reflection
+
+Overall, I really enjoyed our performance and how it turned out in the end. There were several bumps in our progress because we struggled with getting everyone to the meetings and coming up with a fun idea to perform. We initially thought of doing a gardener sorting trees, and then we switched to Avatar, and then we got to the waltz-like dance. Even with the dance, we added more to our project, making it more Dune-themed and adding the march to the beginning and end of the performance. Since we had 16 members with different schedules, we had problems with gathering everyone at 1 place. We had multiple meetings at school where we discused ideas and had a couple of rehearsals. We also had 2 practices at Heritage Park where we finalized our plans and did complete rehearsals with most of the members. 
+
+We also tracked our progress and meetings with an Instagram account that David made. We gain a few followers and we were able to show to them our progress and videos of our practices.
+
+<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/d62f24e4-bbea-4963-97d7-fe885da619f1" width=1000>
+
+I really enjoyed watching the other groups perform their sorting performances. The whole event was much more entertaining than I thought it would be, and it actually helped me understand the different sorts better. I really liked the winner's performance, performed by Rachelina and their group. Their group had a funny act that also managed to teach the sort very well.
+
+![image](https://github.com/TayKimmy/CSA-Repository/assets/107821010/34751d96-9e16-4a22-8e43-37e97e77e5e2)
+
+Ultimately, the whole performance was really good and I enjoyed practicing a dance and the sort. When I first heard of the event, I was unsure if I would have an enjoyable experience and I would just try to get a good grade. But throughout the practices and the actual event, I realized that I was having fun and actually enjoying myself.

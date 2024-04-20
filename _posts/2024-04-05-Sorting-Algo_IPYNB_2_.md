@@ -6,12 +6,19 @@ type: tangibles
 courses: {'csa': {'week': 29}}
 ---
 
-## Flower Class
-Creating the comparable object and the flower class.
+## Flower Class and Collectable Interface
 
 
-```java
-public class Flower implements Comparable<Flower> {
+
+```Java
+public interface Collectable extends Comparable<Collectable> {
+    String toJson();
+}
+```
+
+
+```Java
+public class Flower implements Collectable {
     private String name;
     private int petals;
 
@@ -24,89 +31,54 @@ public class Flower implements Comparable<Flower> {
         return name;
     }
 
-    public int getPetals() {
+    public int getpetals() {
         return petals;
     }
 
-    public void setPetals(int petals) {
-        this.petals = petals;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
     @Override
-    public int compareTo(Flower other) {
-        return this.name.compareTo(other.name);
+    public int compareTo(Collectable other) {
+        Flower otherFlower = (Flower) other;
+        return this.name.compareTo(otherFlower.name);
     }
 
     @Override
     public String toString() {
-        return name + " (" + petals + " petals)";
+        return "( " + name + "," + " petals: " + petals + ")";
     }
-}
 
-public class generateFlowers {
-    
+    @Override
+    public String toJson() {
+        return "{\"name\": \"" + name + "\", \"petals\": " + petals + "}";
+    }
 }
 
 ```
 
-## Bubble Sort Implementation
+## Sorting Class
+Creating the class that will store all the sorts as methods.
 
 
-```java
+```Java
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
-public class BubbleSort {
-    public static void bubbleSort(ArrayList<Comparable> list) {
+public class Sorting {
+
+    // Bubble Sort
+    public static void bubbleSort(ArrayList<Collectable> list) {
         int n = list.size();
         for (int i = 0; i < n - 1; i++) {
             for (int j = 0; j < n - i - 1; j++) {
                 if (list.get(j).compareTo(list.get(j + 1)) > 0) {
-                    // swap elements
-                    Comparable temp = list.get(j);
-                    list.set(j, list.get(j + 1));
-                    list.set(j + 1, temp);
+                    Collections.swap(list, j, j + 1);
                 }
             }
         }
     }
 
-    public static void main(String[] args) {
-        ArrayList<Comparable> numbers = generateNumbers(); 
-        System.out.println("List before sorting: " + numbers);
-
-        bubbleSort(numbers);
-
-        System.out.println("List after sorting: " + numbers);
-    }
-
-    public static ArrayList<Comparable> generateNumbers() {
-        ArrayList<Comparable> numbers = new ArrayList<>();
-        for (int i = 0; i < 10; i++) { 
-            numbers.add((int) (Math.random() * 101)); 
-        }
-        return numbers;
-    }
-}
-
-BubbleSort.main(null);
-```
-
-    List before sorting: [41, 10, 10, 0, 80, 15, 79, 21, 54, 13]
-    List after sorting: [0, 10, 10, 13, 15, 21, 41, 54, 79, 80]
-
-
-## Selection Sort Implementation
-
-
-```java
-import java.util.ArrayList;
-
-public class SelectionSort {
-    public static void selectionSort(ArrayList<Comparable> list) {
+    // Selection Sort
+    public static void selectionSort(ArrayList<Collectable> list) {
         int n = list.size();
         for (int i = 0; i < n - 1; i++) {
             int minIndex = i;
@@ -115,91 +87,26 @@ public class SelectionSort {
                     minIndex = j;
                 }
             }
-            Comparable temp = list.get(minIndex);
-            list.set(minIndex, list.get(i));
-            list.set(i, temp);
+            Collections.swap(list, i, minIndex);
         }
     }
 
-    public static void main(String[] args) {
-        ArrayList<Comparable> numbers = generateNumbers(); 
-        System.out.println("List before sorting: " + numbers);
-        
-        selectionSort(numbers);
-        
-        System.out.println("List after sorting: " + numbers);
-    }
-
-    public static ArrayList<Comparable> generateNumbers() {
-        ArrayList<Comparable> numbers = new ArrayList<>();
-        for (int i = 0; i < 10; i++) { 
-            numbers.add((int) (Math.random() * 101)); 
-        }
-        return numbers;
-    }
-}
-
-SelectionSort.main(null);
-```
-
-    List before sorting: [21, 28, 79, 11, 55, 34, 29, 10, 15, 4]
-    List after sorting: [4, 10, 11, 15, 21, 28, 29, 34, 55, 79]
-
-
-## Insertion Sort Implementation
-
-
-```java
-import java.util.ArrayList;
-
-public class InsertionSort {
-    public static void insertionSort(ArrayList<Comparable> list) {
+    // Insertion Sort
+    public static void insertionSort(ArrayList<Collectable> list) {
         int n = list.size();
-        for (int i = 1; i < n; ++i) {
-            Comparable key = list.get(i);
+        for (int i = 1; i < n; i++) {
+            Collectable key = list.get(i);
             int j = i - 1;
             while (j >= 0 && list.get(j).compareTo(key) > 0) {
                 list.set(j + 1, list.get(j));
                 j--;
             }
-            list.set(j + 1, key); 
+            list.set(j + 1, key);
         }
     }
 
-    public static void main(String[] args) {
-        ArrayList<Comparable> numbers = generateNumbers(); 
-        System.out.println("List before sorting: " + numbers);
-        
-        insertionSort(numbers);
-        
-        System.out.println("List after sorting: " + numbers);
-    }
-
-    public static ArrayList<Comparable> generateNumbers() {
-        ArrayList<Comparable> numbers = new ArrayList<>();
-        for (int i = 0; i < 10; i++) { 
-            numbers.add((int) (Math.random() * 101)); 
-        }
-        return numbers;
-    }
-}
-
-InsertionSort.main(null);
-```
-
-    List before sorting: [75, 74, 15, 53, 69, 51, 77, 13, 31, 9]
-    List after sorting: [9, 13, 15, 31, 51, 53, 69, 74, 75, 77]
-
-
-## Quick Sort Implementation
-
-
-```java
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class QuickSort {
-    public static void quickSort(ArrayList<Comparable> list, int low, int high) {        
+    // Quick Sort
+    public static void quickSort(ArrayList<Collectable> list, int low, int high) {
         if (low < high) {
             int pi = partition(list, low, high);
             quickSort(list, low, pi - 1);
@@ -207,107 +114,124 @@ public class QuickSort {
         }
     }
 
-    private static int partition(ArrayList<Comparable> list, int low, int high) {
-        Comparable pivot = list.get(high);
+    private static int partition(ArrayList<Collectable> list, int low, int high) {
+        Collectable pivot = list.get(high);
         int i = low - 1;
         for (int j = low; j < high; j++) {
-            if (list.get(j).compareTo(pivot) <= 0) {
+            if (list.get(j).compareTo(pivot) < 0) {
                 i++;
-                Comparable temp = list.get(i);
-                list.set(i, list.get(j));
-                list.set(j, temp);
+                Collections.swap(list, i, j);
             }
         }
-        Comparable temp = list.get(i + 1);
-        list.set(i + 1, list.get(high));
-        list.set(high, temp);
+        Collections.swap(list, i + 1, high);
         return i + 1;
     }
 
-    public static void main(String[] args) {
-        ArrayList<Comparable> numbers = generateNumbers(10);
-        System.out.println("List before sorting: " + numbers);
-        
-        quickSort(numbers, 0, numbers.size() - 1);
-        
-        System.out.println("List after sorting: " + numbers);
+    // Merge Sort
+    public static void mergeSort(ArrayList<Collectable> list) {
+        mergeSortHelper(list, 0, list.size() - 1);
     }
 
-    public static ArrayList<Comparable> generateNumbers(int size) {
-        ArrayList<Comparable> numbers = new ArrayList<>();
-        for (int i = 0; i < size; i++) {
-            numbers.add((int) (Math.random() * 101)); 
-        }
-        return numbers;
-    }
-}
-
-QuickSort.main(null);
-```
-
-    List before sorting: [42, 41, 43, 98, 60, 27, 73, 76, 77, 93]
-    List after sorting: [27, 41, 42, 43, 60, 73, 76, 77, 93, 98]
-
-
-## Merge Sort Implementation
-
-
-```java
-import java.util.ArrayList;
-import java.util.Arrays;
-
-public class MergeSort {
-    public static void mergeSort(ArrayList<Comparable> list) {
-        if (list.size() > 1) {
-            int mid = list.size() / 2;
-            ArrayList<Comparable> left = new ArrayList<>(list.subList(0, mid));
-            ArrayList<Comparable> right = new ArrayList<>(list.subList(mid, list.size()));
-
-            mergeSort(left);
-            mergeSort(right);
-
-            merge(list, left, right); 
+    private static void mergeSortHelper(ArrayList<Collectable> list, int low, int high) {
+        if (low < high) {
+            int mid = (low + high) / 2;
+            mergeSortHelper(list, low, mid);
+            mergeSortHelper(list, mid + 1, high);
+            merge(list, low, mid, high);
         }
     }
 
-    private static void merge(ArrayList<Comparable> list, ArrayList<Comparable> left, ArrayList<Comparable> right) {
-        int i = 0, j = 0, k = 0;
-        while (i < left.size() && j < right.size()) {
-            if (left.get(i).compareTo(right.get(j)) <= 0) {
-                list.set(k++, left.get(i++));
+    private static void merge(ArrayList<Collectable> list, int low, int mid, int high) {
+        ArrayList<Collectable> temp = new ArrayList<>(high - low + 1);
+        int i = low, j = mid + 1;
+
+        while (i <= mid && j <= high) {
+            if (list.get(i).compareTo(list.get(j)) <= 0) {
+                temp.add(list.get(i++));
             } else {
-                list.set(k++, right.get(j++));
+                temp.add(list.get(j++));
             }
         }
-        while (i < left.size()) {
-            list.set(k++, left.get(i++));
+
+        while (i <= mid) {
+            temp.add(list.get(i++));
         }
-        while (j < right.size()) {
-            list.set(k++, right.get(j++));
+
+        while (j <= high) {
+            temp.add(list.get(j++));
+        }
+
+        for (i = 0; i < temp.size(); i++) {
+            list.set(low + i, temp.get(i));
         }
     }
+}
+```
+
+## Testing
+
+
+```Java
+import java.util.ArrayList;
+
+public class Test {
 
     public static void main(String[] args) {
-        ArrayList<Comparable> numbers = generateNumbers(); 
-        System.out.println("List before sorting: " + numbers);
-        
-        mergeSort(numbers); 
-        
-        System.out.println("List after sorting: " + numbers);
-    }
+        ArrayList<Collectable> flowers = new ArrayList<>();
+        flowers.add(new Flower("Tulip", 6));
+        flowers.add(new Flower("Daisy", 8));
+        flowers.add(new Flower("Sunflower", 12));
+        flowers.add(new Flower("Rose", 5));
+        flowers.add(new Flower("Lily", 6));
+        flowers.add(new Flower("Orchid", 10));
+        flowers.add(new Flower("Carnation", 4));
+        flowers.add(new Flower("Daffodil", 6));
+        flowers.add(new Flower("Peony", 7));
+        flowers.add(new Flower("Hydrangea", 10));
 
-    public static ArrayList<Comparable> generateNumbers() {
-        ArrayList<Comparable> numbers = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            numbers.add((int) (Math.random() * 101)); 
-        }
-        return numbers;
+        System.out.println("Flowers before sorting:");
+        System.out.println(flowers);
+
+        // Sorting using Bubble Sort
+        Sorting.bubbleSort(flowers);
+        System.out.println("Flowers after Bubble Sort:");
+        System.out.println(flowers);
+
+        // Sorting using Merge Sort
+        Sorting.selectionSort(flowers);
+        System.out.println("Flowers after Selection Sort:");
+        System.out.println(flowers);
+
+        // Sorting using Merge Sort
+        Sorting.insertionSort(flowers);
+        System.out.println("Flowers after Insertion Sort:");
+        System.out.println(flowers);
+
+        // Sorting using Merge Sort
+        Sorting.mergeSort(flowers);
+        System.out.println("Flowers after Merge Sort:");
+        System.out.println(flowers);
+
+        // Sorting using Quick Sort
+        Sorting.quickSort(flowers, 0, flowers.size() - 1);
+        System.out.println("Flowers after Quick Sort:");
+        System.out.println(flowers);
     }
 }
 
-MergeSort.main(null);
+Test.main(null);
 ```
 
-    List before sorting: [17, 68, 10, 21, 99, 0, 77, 88, 5, 66]
-    List after sorting: [0, 5, 10, 17, 21, 66, 68, 77, 88, 99]
+    Flowers before sorting:
+    [( Tulip, petals: 6), ( Daisy, petals: 8), ( Sunflower, petals: 12), ( Rose, petals: 5), ( Lily, petals: 6), ( Orchid, petals: 10), ( Carnation, petals: 4), ( Daffodil, petals: 6), ( Peony, petals: 7), ( Hydrangea, petals: 10)]
+    Flowers after Bubble Sort:
+    [( Carnation, petals: 4), ( Daffodil, petals: 6), ( Daisy, petals: 8), ( Hydrangea, petals: 10), ( Lily, petals: 6), ( Orchid, petals: 10), ( Peony, petals: 7), ( Rose, petals: 5), ( Sunflower, petals: 12), ( Tulip, petals: 6)]
+    Flowers after Selection Sort:
+    [( Carnation, petals: 4), ( Daffodil, petals: 6), ( Daisy, petals: 8), ( Hydrangea, petals: 10), ( Lily, petals: 6), ( Orchid, petals: 10), ( Peony, petals: 7), ( Rose, petals: 5), ( Sunflower, petals: 12), ( Tulip, petals: 6)]
+    Flowers after Insertion Sort:
+    [( Carnation, petals: 4), ( Daffodil, petals: 6), ( Daisy, petals: 8), ( Hydrangea, petals: 10), ( Lily, petals: 6), ( Orchid, petals: 10), ( Peony, petals: 7), ( Rose, petals: 5), ( Sunflower, petals: 12), ( Tulip, petals: 6)]
+    Flowers after Merge Sort:
+    [( Carnation, petals: 4), ( Daffodil, petals: 6), ( Daisy, petals: 8), ( Hydrangea, petals: 10), ( Lily, petals: 6), ( Orchid, petals: 10), ( Peony, petals: 7), ( Rose, petals: 5), ( Sunflower, petals: 12), ( Tulip, petals: 6)]
+    Flowers after Quick Sort:
+    [( Carnation, petals: 4), ( Daffodil, petals: 6), ( Daisy, petals: 8), ( Hydrangea, petals: 10), ( Lily, petals: 6), ( Orchid, petals: 10), ( Peony, petals: 7), ( Rose, petals: 5), ( Sunflower, petals: 12), ( Tulip, petals: 6)]
 
