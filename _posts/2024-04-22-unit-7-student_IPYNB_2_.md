@@ -13,7 +13,7 @@ courses: {'csa': {'week': 25}}
 
 # 7.1: ArrayList Intro
 
-- ArrayLists are ________, meaning their size can grow or shrink as needed, but arrays are static in size
+- ArrayLists are mutable, meaning their size can grow or shrink as needed, but arrays are static in size
 - Instead of creating a new array of a different size and copying the data from the initial array to the new one, we can use ArrayLists
 
 |Arrays|ArrayLists|
@@ -23,13 +23,13 @@ courses: {'csa': {'week': 25}}
 |An object with no methods|Class with many methods|
 |Not as flexible|Designed to be very flexible|
 |Can store primitive data|Not designed to store primitives|
-||Slightly slower than arrays|
-||Need an import statement|
+|Faster than ArrayList|Slightly slower than arrays|
+|Don't need an import statement|Need an import statement|
 
 In order to use the ArrayList class, the ArrayList class needs to be imported from the java util package. This can be done by writing import java.util.ArrayList at the top of the class file.
 
 
-```java
+```Java
 import java.util.ArrayList;  // Import the ArrayList class
 
 // Declare and initialize an ArrayList of integers
@@ -41,14 +41,14 @@ ArrayList objects are created in the same fashion as other object classes. The p
 This can be replaced by an object data type:
 
 
-```java
+```Java
 ArrayList<E> list = new ArrayList<E>();
 ```
 
 We can actually declare ArrayLists without specifying the type that will be included in the ArrayList, but specifying the data type is smarter because it allows the compiler to find errors before run time, so its more efficient and easy to spot errors.
 
 
-```java
+```Java
 ArrayList list = new ArrayList();
 ```
 
@@ -57,12 +57,16 @@ ArrayList list = new ArrayList();
 Create 2 ArrayLists, 1 called `studentName` and 1 called `studentAge`
 
 
-```java
+```Java
+import java.util.ArrayList;
+
 public class Student
 {
     public static void main(String[] args)
     {
         // Needs to define on left side, right side optional
+        ArrayList<String> studentName = new ArrayList<>();
+        ArrayList<Integer> studentAge = new ArrayList<>();
         
     }
 }
@@ -100,7 +104,7 @@ Students will be able to represent collections of related object reference data 
 Consider the following code:
 
 
-```java
+```Java
 ArrayList<Integer> a1 = new ArrayList<>();
 System.out.println(a1.size());
 ```
@@ -116,7 +120,7 @@ System.out.println(a1.size());
 Consider the following code:
 
 
-```java
+```Java
 ArrayList<Double> a2 = new ArrayList<>();
 a2.add(1.0);
 a2.add(2.0);
@@ -133,7 +137,7 @@ System.out.println(a2);
 Consider the following code:
 
 
-```java
+```Java
 ArrayList<String> h = new ArrayList<>();
 
 h.add("Hello");
@@ -158,7 +162,7 @@ h.add(false);
 Now, consider this code:
 
 
-```java
+```Java
 ArrayList<String> g = new ArrayList<>();
 
 g.add("Hello");
@@ -177,14 +181,14 @@ System.out.println(g);
 
 **Question:** Why does this code work?
 
-adds correct data type into string arraylist
+It adds the correct data type into String ArrayList.
 
 ### Deleting Items from an `ArrayList`
 
 `E remove(int index)` : Removes the element at position `index`, and moves the elements at position `index + 1` and higher to the left. It also subtracts one from the list's size. The return value is the element formerly at position `index`.
 
 
-```java
+```Java
 // If you are confused of what list g is, look back at the previous code.
 g.remove(3);
 String former = g.remove(0);
@@ -199,7 +203,7 @@ System.out.println(former);
 `E set(int index, E obj)` : Replaces the element at position `index` with `obj` and returns the element formerly at position `index`.
 
 
-```java
+```Java
 String helloFormer = g.set(1, "Bonjour");
 System.out.println(helloFormer);
 System.out.println(g);
@@ -214,7 +218,7 @@ System.out.println(g);
 `E get(int index)` Returns the element at position `index` in the list.
 
 
-```java
+```Java
 String hello = g.get(3);
 System.out.println(hello);
 System.out.println(g);
@@ -229,7 +233,7 @@ System.out.println(g);
 The only time that it is wise to use `ArrayList` instead of `ArrayList<E>` is when it is as a function parameter and it is only using `ArrayList<>.get(E)` or `ArrayList<>.size()`. Consider the following code:
 
 
-```java
+```Java
 private void accessOnly(ArrayList arr) {
     if (arr.size() > 0) {
         System.out.println(arr.get(0)); // Change the index to the one you want to access
@@ -250,7 +254,7 @@ accessOnly(myList);
 In order for you to return an `ArrayList`, the data type must be specified, and the return type must be the same as the return value. Consider the following code:
 
 
-```java
+```Java
 private ArrayList<String> returnTheSame() {
     ArrayList<String> arr = new ArrayList<String>(); // Initialize the ArrayList
     arr.add("Hello");
@@ -273,19 +277,19 @@ System.out.println(result);
 
     * Look back at *Size of the `ArrayList`*. What does the code output and why?
 
-    It looks at the literal size of the list, which is how many elements are present within it, otherwise known as the length.
-
+        <mark>The code outputs 0 because the size of the ArrayList is 0, since the ArrayList is empty.</mark>
+    
     * Look back at *Adding items to an `ArrayList`*. What does the code output and why? What type of function is `void`, and what will be the return value?
 
-    Returns the arraylist with all of its elements that were previously added. a void function does not return anything.
+        <mark>The code returns the arraylist with all of its elements that were previously added. A void function does not return anything.</mark>
 
     * Look back at Example 1. What two lines did we remove? Why?
-    
-    we removed the lines trying to add a double and a boolean to the arraylist, as it was specified to only contain string values.
+
+        <mark>We removed the lines trying to add a double and a boolean to the ArrayList because the ArrayList was specified to only contain string values.</mark>
 
     * If an `ArrayList` is being used as a parameter, what are the only two methods I can use from it? What would happen if I tried to use any other methods?
-    
-    you can only use get and size. it will only update the local array in the method and not the actual array.
+
+        <mark>I can only use get and size. Using any other method will only update the local array in the method and not the actual array.</mark>
 
 - Using the Hack Helper, write code that will:
 
@@ -298,18 +302,83 @@ System.out.println(result);
 ### Hack Helper
 
 
-```java
+```Java
+import java.util.ArrayList;
+
 public class HackHelper {
-    private String manipulateList(ArrayList<Integer> array) {
+    private void addItems(ArrayList<Integer> array) {
+        array.add(42);
+        array.add(99);
+    }
+
+    private void removeItem(ArrayList<Integer> array, int index) {
+        if (index >= 0 && index < array.size()) {
+            array.remove(index);
+        }
+    }
+
+    private void replaceItem(ArrayList<Integer> array, int index, int newValue) {
+        if (index >= 0 && index < array.size()) {
+            array.set(index, newValue);
+        }
+    }
+
+    private Integer getFirstElement(ArrayList<Integer> array) {
+        if (!array.isEmpty()) {
+            return array.get(0);
+        }
         return null;
     }
 
+    private Integer getLastElement(ArrayList<Integer> array) {
+        if (!array.isEmpty()) {
+            return array.get(array.size() - 1);
+        }
+        return null;
+    }
+
+    private String manipulateList(ArrayList<Integer> array) {
+        StringBuilder result = new StringBuilder();
+
+        addItems(array);
+        result.append("Items added: 42, 99\n");
+
+        int removedItem = array.get(1);
+        removeItem(array, 1);
+        result.append("Item " + removedItem + " removed at index 1\n");
+
+        replaceItem(array, 0, 55);
+        result.append("Item at index 0 replaced with 55\n");
+
+        Integer first = getFirstElement(array);
+        Integer last = getLastElement(array);
+        result.append("First element: ").append(first != null ? first : "None").append("\n");
+        result.append("Last element: ").append(last != null ? last : "None").append("\n");
+
+        result.append("List size: ").append(array.size());
+        return result.toString();
+    }
+
     public static void main(String[] args) {
+        HackHelper helper = new HackHelper();
+
+        ArrayList<Integer> myList = new ArrayList<>();
+
+        String manipulationResult = helper.manipulateList(myList);
+        System.out.println(manipulationResult);
     }
 }
 
 HackHelper.main(null);
 ```
+
+    Items added: 42, 99
+    Item 99 removed at index 1
+    Item at index 0 replaced with 55
+    First element: 55
+    Last element: 55
+    List size: 1
+
 
 # 7.3: Traversing Arraylists
 
@@ -323,10 +392,10 @@ HackHelper.main(null);
 
 - Deleting elements during a traversal of an Arraylist requires special techniques to avoid skiping elements.
 
-- The indicies of an Arraylist start at ___; If you try to use any value lower than 0, you will get an ______ error
+- The indicies of an Arraylist start at 0; If you try to use any value lower than 0, you will get an `IndexOutOfBoundsException` error
 
 
-```java
+```Java
 import java.util.ArrayList;
 import java.util.List;
 
@@ -444,7 +513,7 @@ Before you uncomment the code and run it, guess what the code will do based on w
 ### Let's Look at an Example (Example 1)
 
 
-```java
+```Java
 public class ArrayListExample {
     private double findMax(double[] values) {
         double max = values[0];
@@ -475,7 +544,7 @@ public class ArrayListExample {
 Take a closer look at the `findMax()` method. It takes in a list of doubles as parameters. It will then use a `for` loop to find the maximum value in the list. Now, using what we know, can we replace the list of doubles with an ArrayList of Doubles? We sure can! Take a look at how we can use ArrayList to do just that:
 
 
-```java
+```Java
 public class ArrayListExample {
     private double findMax(ArrayList<Double> values) {
         double max = values.get(0);
@@ -518,7 +587,7 @@ ArrayListExample.main(null);
 Take a look at this code:
 
 
-```java
+```Java
 public class ArrayListExample {
     private int findMin(int[] values) {
         //int min = Integer.MAX_VALUE;
@@ -544,7 +613,7 @@ ArrayListExample.main(null);
 Now, can we use ArrayLists to make this code better? We sure can! Take a look at the new and improved code that uses ArrayLists:
 
 
-```java
+```Java
 public class ArrayListExample {
     private int findMin(ArrayList<Integer> values) {
         //int min = Integer.MAX_VALUE;
@@ -580,7 +649,7 @@ ArrayListExample.main(null);
 
     * Why do we use `ArrayList`? Why not just regular lists?
 
-    Regular lists have fixed size in Java.
+    <mark>Regular lists have fixed size in Java.</mark>
 
 - Demonstrate at least two `ArrayList` methods that aren't `ArrayList<>.size()` and `ArrayList<>.get()`.
 
@@ -589,30 +658,39 @@ ArrayListExample.main(null);
 ### Hack Helper
 
 
-```java
+```Java
+import java.util.ArrayList;
+
 public class ArrayListHacks {
     private int findSum(ArrayList<Integer> values) {
-        return 0;
+        int sum = 0;
+        for (Integer num : values) {
+            sum += num;
+        }
+        return sum;
     }
 
     public static void main(String[] args) {
         ArrayList<Integer> nums = new ArrayList<>();
-        nums.add(0);
+        nums.add(0); // first method
         nums.add(1);
         nums.add(2);
         nums.add(300);
         nums.add(5);
         nums.add(8);
+        nums.remove(0); // second method
 
         ArrayListHacks hacks = new ArrayListHacks();
-        System.out.println(hacks.findSum(nums));
+        System.out.println(nums);
+        System.out.println("Sum: " + hacks.findSum(nums));
     }
 }
 
 ArrayListHacks.main(null);
 ```
 
-    0
+    [1, 2, 300, 5, 8]
+    Sum: 316
 
 
 # 7.5 Searching
@@ -642,7 +720,7 @@ Linear structures are data structures such as Arrays or ArrayLists. Linear searc
 ### Searching an ``ArrayList`` of Double
 
 
-```java
+```Java
 public int where(double magicNumber, ArrayList<Double> realNumbers, double delta)
 {
     for (int index = 0; index < realNumbers.size(); index++)
@@ -659,7 +737,7 @@ public int where(double magicNumber, ArrayList<Double> realNumbers, double delta
 ### Searching an ``ArrayList`` of book for a ``String``
 
 
-```java
+```Java
 public int findTheWord(String searchedPhrase, ArrayList<Book> myBooks)
 {
     for (int index = 0; index < myBooks.size(); index++)
@@ -690,7 +768,7 @@ public int findTheWord(String searchedPhrase, ArrayList<Book> myBooks)
 
 
 
-```java
+```Java
 import java.util.ArrayList;
 
 public class ColorRemoval {
@@ -771,7 +849,7 @@ ColorRemoval.main(null);
 Example:
 
 
-```java
+```Java
 // with normal arrays
 for (int outerLoop = 0; outerLoop < myDucks.length; outerLoop ++)
 {
@@ -815,7 +893,7 @@ During each iteration of the outer loop, it finds the index of the minimum eleme
 Example:
 
 
-```java
+```Java
 for (int outer = 1; outer < randomList.size(); outer++)
 {
     DebugDuck tested = randomList.get(outer);
@@ -851,3 +929,59 @@ for (int outer = 1; outer < randomList.size(); outer++)
 
 
 ## Complete the hacks in the cell below
+
+
+```Java
+import java.util.ArrayList;
+
+public class ArrayListManipulation {
+
+    private static void insertionSort(ArrayList<Integer> numbers) {
+        for (int i = 1; i < numbers.size(); i++) {
+            int key = numbers.get(i);
+            int j = i - 1;
+
+            while (j >= 0 && numbers.get(j) > key) {
+                numbers.set(j + 1, numbers.get(j));
+                j--;
+            }
+            numbers.set(j + 1, key);
+        }
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> numbers = new ArrayList<>();
+        numbers.add(100);
+        numbers.add(18);
+        numbers.add(30);
+        numbers.add(4);
+        numbers.add(63);
+        numbers.add(49);
+
+        System.out.println("Original ArrayList: " + numbers);
+
+        int elementToRemove = 30;
+
+        int index = 0;
+        while (index < numbers.size()) {
+            if (numbers.get(index) == elementToRemove) {
+                numbers.remove(index);
+            } else {
+                index++;
+            }
+        }
+
+        System.out.println("ArrayList after removing " + elementToRemove + ": " + numbers);
+
+        insertionSort(numbers);
+        System.out.println("ArrayList after insertion sort: " + numbers);
+    }
+}
+
+ArrayListManipulation.main(null);
+```
+
+    Original ArrayList: [100, 18, 30, 4, 63, 49]
+    ArrayList after removing 30: [100, 18, 4, 63, 49]
+    ArrayList after insertion sort: [4, 18, 49, 63, 100]
+

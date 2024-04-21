@@ -311,8 +311,8 @@ Complete method arraySum below.
  */ 
 public static int arraySum(int[] arr) {
     int sum = 0;
-    for (int i = 0; i <     arr.length; i++) {
-        sum += i;
+    for (int i = 0; i < arr.length; i++) {
+        sum += arr[i];
     }
     return sum;
 }
@@ -353,3 +353,38 @@ public static boolean isDiverse(int[][] arr2D) {
     return true;
 }
 ```
+
+### Testing!!!
+
+
+```Java
+public class Tester {
+    public static void main(String[] args) {
+        int[] arr1 =  {1, 3, 2, 7, 3};
+        int[][] mat1 = {
+            {1, 3, 2, 7, 3},
+            {10, 10, 4, 6, 2},
+            {5, 3, 5, 9, 6},
+            {7, 6, 4, 2, 1}
+        };
+        int[][] mat2 = {
+            {1, 1, 5, 3, 4},
+            {12, 7, 6, 1, 9},
+            {8, 11, 10, 2, 5},
+            {3, 2, 3, 0, 6}
+        };
+
+        System.out.println(arraySum(arr1));
+        System.out.println(Arrays.toString(rowSums(mat1)));
+        System.out.println(isDiverse(mat1));
+        System.out.println(isDiverse(mat2));
+    }
+}
+Tester.main(null);
+```
+
+    16
+    [16, 32, 28, 20]
+    true
+    false
+

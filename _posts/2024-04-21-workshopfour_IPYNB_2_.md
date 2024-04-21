@@ -305,6 +305,18 @@ Finish FRQ from Friday, 2019 Q3
 
 
 ```Java
+// code from part A for testing purposes
+public static int arraySum(int[] arr) {
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum;
+}
+```
+
+
+```Java
 /** Returns a one-dimensional array in which the entry at index k is the sum of * the entries of row k of the two-dimensional array arr2D. */ 
 public static int[] rowSums(int[][] arr2D) {
     int[] sum = new int[arr2D.length];
@@ -334,3 +346,35 @@ public static boolean isDiverse(int[][] arr2D) {
     return true;
 }
 ```
+
+## Testing!!
+
+
+```Java
+public class Tester {
+    public static void main(String[] args) {
+        int[][] mat1 = {
+            {1, 3, 2, 7, 3},
+            {10, 10, 4, 6, 2},
+            {5, 3, 5, 9, 6},
+            {7, 6, 4, 2, 1}
+        };
+        int[][] mat2 = {
+            {1, 1, 5, 3, 4},
+            {12, 7, 6, 1, 9},
+            {8, 11, 10, 2, 5},
+            {3, 2, 3, 0, 6}
+        };
+
+        System.out.println(Arrays.toString(rowSums(mat1)));
+        System.out.println(isDiverse(mat1));
+        System.out.println(isDiverse(mat2));
+    }
+}
+Tester.main(null);
+```
+
+    [16, 32, 28, 20]
+    true
+    false
+
