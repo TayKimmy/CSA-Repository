@@ -10,7 +10,7 @@ courses: {'csa': {'week': 30}}
 
 # 7.5 Searching
 
-## What does college board want you to know
+## What college board wants you to know
 - Differences in searching using arrayList and arrays
 - Types of searches: sequential (linear) and binary
 - Searching for a double vs int vs object

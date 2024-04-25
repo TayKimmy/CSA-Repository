@@ -8,7 +8,7 @@ type: hacks
 courses: {'csa': {'week': 30}}
 ---
 
-<h2>  8.1: Declaring + Initializing 2D Arrays; Determining their  </h2>
+<h2>  8.1: Declaring + Initializing 2D Arrays </h2>
 
 > Review: 
 Arrays are a collection (list) of elements (primitive or object reference type data)  
