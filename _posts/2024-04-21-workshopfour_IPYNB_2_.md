@@ -1,9 +1,9 @@
 ---
-title: 2D Arrays Workshop Hacks
-description: Unit 8 of CB
 toc: True
 comments: True
 layout: post
+title: 2D Arrays Workshop Hacks
+description: Unit 8 of CB
 type: hacks
 courses: {'csa': {'week': 30}}
 ---

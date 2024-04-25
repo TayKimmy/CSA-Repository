@@ -3,6 +3,7 @@ toc: True
 comments: True
 layout: post
 title: Searching Workshop Hacks
+description: Searching Lesson
 type: hacks
 courses: {'csa': {'week': 30}}
 ---
