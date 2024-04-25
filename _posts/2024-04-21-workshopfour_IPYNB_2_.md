@@ -57,7 +57,7 @@ r: number of rows (number of arrays)
 c: number of columns (length of each array)
 
 
-```Java
+```java
 public class Seasons {
 
     private String[][] Seasons = new String[2][3];
@@ -114,7 +114,7 @@ To update the element of a 2D array, all you need to do is reference its locatio
 
 
 
-```Java
+```java
 public class Seasons {
 
     private String[][] seasons = new String[2][3];
@@ -163,7 +163,7 @@ Out of bounds errors will *always* lose you at least one point on the scoring gu
 If values are intended to be modified during an iterative process, *do not* use a for-each loop. The elements accessed using this strategy are copies; accessing the array indexes directly to make modifications is the only way for them to be retained. See the example below:
 
 
-```Java
+```java
 import java.util.Arrays;
 
 int[][] modifyArray = {
@@ -191,7 +191,7 @@ System.out.println("After to modification: " + Arrays.deepToString(modifyArray))
 Instead, when modifying, you can use a traditional for loop (which also comes with the added benefit of having direct access to the relevant indexes):
 
 
-```Java
+```java
 import java.util.Arrays;
 
 int[][] actualModifyArray = {
@@ -241,7 +241,7 @@ Once again, make sure that you’re using the proper parameters!
 It's very possible that a question will prompt you to access a 2D array by its columns. (We found two in research for this lesson.) If you know you haven't practiced column-major order, give the code below a look. It might be a good idea to create your own code cell with a unique 2D array to practice with.
 
 
-```Java
+```java
 int[][] array = {
     {3, 5, 1},
     {9, 9, 7}
@@ -269,7 +269,7 @@ for (int col = 0; col < array[0].length; col++) {
 
 
 
-```Java
+```java
 import java.util.Arrays;
 
 public class TrimesterGrades {
@@ -307,7 +307,7 @@ Finish FRQ from Friday, 2019 Q3
 (b) Write a static method rowSums that calculates the sums of each of the rows in a given twodimensional array and returns these sums in a one-dimensional array. The method has one parameter, a twodimensional array arr2D of int values. The array is in row-major order: arr2D[r][c] is the entry at row r and column c. The method returns a one-dimensional array with one entry for each row of arr2D such that each entry is the sum of the corresponding row in arr2D. As a reminder, each row of a two-dimensional array is a one-dimensional array. For example, if mat1 is the array represented by the following table, the call rowSums(mat1) returns the array {16, 32, 28, 20}. Assume that arraySum works as specified, regardless of what you wrote in part (a). You must use arraySum appropriately to receive full credit. Complete method rowSums below.
 
 
-```Java
+```java
 // code from part A for testing purposes
 public static int arraySum(int[] arr) {
     int sum = 0;
@@ -319,7 +319,7 @@ public static int arraySum(int[] arr) {
 ```
 
 
-```Java
+```java
 /** Returns a one-dimensional array in which the entry at index k is the sum of * the entries of row k of the two-dimensional array arr2D. */ 
 public static int[] rowSums(int[][] arr2D) {
     int[] sum = new int[arr2D.length];
@@ -335,7 +335,7 @@ public static int[] rowSums(int[][] arr2D) {
 (c) A two-dimensional array is diverse if no two of its rows have entries that sum to the same value. In the following examples, the array mat1 is diverse because each row sum is different, but the array mat2 is not diverse because the first and last rows have the same sum.Assume that arraySum and rowSums work as specified, regardless of what you wrote in parts (a) and (b). You must use rowSums appropriately to receive full credit. Complete method isDiverse below.
 
 
-```Java
+```java
 /** Returns true if all rows in arr2D have different row sums; * false otherwise. */ 
 public static boolean isDiverse(int[][] arr2D) {
     int[] arr1D = rowSums(arr2D);
@@ -353,7 +353,7 @@ public static boolean isDiverse(int[][] arr2D) {
 ## Testing!!
 
 
-```Java
+```java
 public class Tester {
     public static void main(String[] args) {
         int[][] mat1 = {
