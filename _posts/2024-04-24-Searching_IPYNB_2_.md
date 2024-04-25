@@ -2,10 +2,9 @@
 toc: True
 comments: True
 layout: post
-title: Searching Lesson
-author: Finn C, Theo H, Grace W, Emma S
+title: Searching Workshop Hacks
 type: hacks
-courses: {'csa': {'week': 29}}
+courses: {'csa': {'week': 30}}
 ---
 
 # 7.5 Searching
@@ -209,7 +208,7 @@ LinearSearch.main(null);
 
 2. When is it preferred to use linear search over binary search?
 
-<mark>**It is preferred to use linear search over binary search when the list or array is small and contains few values. Linear search is also better when the list is unsorted, as binary search requires a sorted list.**</mark>
+<mark>It is preferred to use linear search over binary search when the list or array is small and contains few values. Linear search is also better when the list is unsorted, as binary search requires a sorted list.</mark>
 
 <h2> Recursive algorithms </h2>
 
@@ -299,7 +298,7 @@ BinarySearch.main(null);
 
 What iteration did it find f?
 
-<mark>**It found f at the second iteration.**</mark>
+<mark>It found f at the second iteration.</mark>
 
 ## Hashmap searching
 
@@ -459,18 +458,25 @@ public class Garage {
         }
     }
 
+    public void delete(String key) {
+        Car removedCar = garage.remove(key);
+        if (removedCar == null) {
+            System.out.println(key + " not found in the garage.");
+        } else {
+            System.out.println("Removed: " + key + ", " + removedCar);
+        }
+    }
+
     public static void main(String[] args) {
         Garage myGarage = new Garage();
         myGarage.printGarage();
 
-        // Removing a car from the garage tester code
-        // String key = "Lambo";
-        // Car car = garage.remove(key);
-        // if (car == null) {
-        //     System.out.println(key + " not found");
-        // } else {
-        //     System.out.println("Removed: " + key + ", " + car);
-        // }
+        String removeKey = "Ferrari";
+        myGarage.delete(removeKey);
+
+        System.out.println();
+        System.out.println("AFTER REMOVAL:");
+        myGarage.printGarage();
     }
 }
 
@@ -481,20 +487,26 @@ Garage.main(null);
     Porsche: 2021 Porsche 911 Turbo S
     Lambo: 2021 Lamborghini Aventador
     McLaren: 2021 McLaren 720S
+    Removed: Ferrari, 2021 Ferrari F8 Tributo
+    
+    AFTER REMOVAL:
+    Porsche: 2021 Porsche 911 Turbo S
+    Lambo: 2021 Lamborghini Aventador
+    McLaren: 2021 McLaren 720S
 
 
 # HACKS (you should be able to do with chatgpt)
 
 1. Is sequential/linear or binary more efficient? Why?
 
-<mark>**Binary search is generally more efficient because it has a time complexity of O(log(n)) while linear search has a time complexity of O(n). It will be able to search through larger arrays much faster than linear search will be able to.**</mark>
+<mark>Binary search is generally more efficient because it has a time complexity of O(log(n)) while linear search has a time complexity of O(n). It will be able to search through larger arrays much faster than linear search will be able to.</mark>
 
 2. Why might you not always be able to use binary search?
 
-<mark>**Binary search might not always be a viable method because the list may not be sorted. If not sorted, then either it must be sorted first or another searching method must be used. If there are duplicate elements, binary search may be a harder method to implement as well.**</mark>
+<mark>Binary search might not always be a viable method because the list may not be sorted. If not sorted, then either it must be sorted first or another searching method must be used. If there are duplicate elements, binary search may be a harder method to implement as well.</mark>
 
 3. Which of the following implements a method named contains for searching an array sequentially, confirming whether or not the array contains a requested element?
-<mark>**4**</mark>
+<mark>4</mark>
 
 ![](https://raw.githubusercontent.com/Codemaxxers/codemaxxerblog/main/images/4isanswer.jpg)
 
@@ -532,4 +544,4 @@ for(int i = 0; i < 20; i++) {
 
 ### Answer:
 
-
+<mark>The word "Indubitably!" is outputted 10 times</mark>

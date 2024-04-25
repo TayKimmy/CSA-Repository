@@ -1,8 +1,11 @@
 ---
-title: Workshop 4 - Lesson on 2D Arrays and Traversing them
+title: 2D Arrays Workshop Hacks
 description: Unit 8 of CB
 toc: True
+comments: True
 layout: post
+type: hacks
+courses: {'csa': {'week': 30}}
 ---
 
 <h2>  8.1: Declaring + Initializing 2D Arrays; Determining their  </h2>

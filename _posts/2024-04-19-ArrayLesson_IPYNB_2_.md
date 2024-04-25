@@ -1,12 +1,11 @@
 ---
 toc: True
 comments: True
-layout: notebook
-title: Unit 6.1 - 6.3 Focused on Arrays and Array Examination
+layout: post
+title: Arrays Workshop Hacks
 description: Covering Arrays (Unit 6.1-6.3)
 type: hacks
-permalink: /ArraysLesson
-courses: {'csa': {'week': 29}}
+courses: {'csa': {'week': 30}}
 ---
 
 # 6.1 - Intro to Arrays
@@ -306,7 +305,7 @@ Remember, choosing between a traditional for-loop and a for-each loop depends on
 Complete method arraySum below. 
 
 
-```Java
+```java
 /** Returns the sum of the entries in the one-dimensional array arr.
  */ 
 public static int arraySum(int[] arr) {
@@ -323,7 +322,7 @@ public static int arraySum(int[] arr) {
 (b) Write a static method rowSums that calculates the sums of each of the rows in a given twodimensional array and returns these sums in a one-dimensional array. The method has one parameter, a twodimensional array arr2D of int values. The array is in row-major order: arr2D[r][c] is the entry at row r and column c. The method returns a one-dimensional array with one entry for each row of arr2D such that each entry is the sum of the corresponding row in arr2D. As a reminder, each row of a two-dimensional array is a one-dimensional array. For example, if mat1 is the array represented by the following table, the call rowSums(mat1) returns the array {16, 32, 28, 20}. Assume that arraySum works as specified, regardless of what you wrote in part (a). You must use arraySum appropriately to receive full credit. Complete method rowSums below.
 
 
-```Java
+```java
 /** Returns a one-dimensional array in which the entry at index k is the sum of * the entries of row k of the two-dimensional array arr2D. */ 
 public static int[] rowSums(int[][] arr2D) {
     int[] sum = new int[arr2D.length];
@@ -339,7 +338,7 @@ public static int[] rowSums(int[][] arr2D) {
 (c) A two-dimensional array is diverse if no two of its rows have entries that sum to the same value. In the following examples, the array mat1 is diverse because each row sum is different, but the array mat2 is not diverse because the first and last rows have the same sum.Assume that arraySum and rowSums work as specified, regardless of what you wrote in parts (a) and (b). You must use rowSums appropriately to receive full credit. Complete method isDiverse below.
 
 
-```Java
+```java
 /** Returns true if all rows in arr2D have different row sums; * false otherwise. */ 
 public static boolean isDiverse(int[][] arr2D) {
     int[] arr1D = rowSums(arr2D);
@@ -357,7 +356,7 @@ public static boolean isDiverse(int[][] arr2D) {
 ### Testing!!!
 
 
-```Java
+```java
 public class Tester {
     public static void main(String[] args) {
         int[] arr1 =  {1, 3, 2, 7, 3};
