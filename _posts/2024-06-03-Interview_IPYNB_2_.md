@@ -10,7 +10,7 @@ courses: {'csa': {'week': 35}}
 
 ### Study Website - Practice Nexus
 
-<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/71303401-569f-4585-aa7c-d46f1dac8997">
+<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/71303401-569f-4585-aa7c-d46f1dac8997" width="900">
 
 - My very first project in CSP was focused on helping people study
 - There were three different quizzes - Math, geography, and SAT
@@ -27,7 +27,7 @@ What I learned:
 
 ### Cars Project -
 
-<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/28b155f6-83cf-4269-8922-134e5d1fd312">
+<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/28b155f6-83cf-4269-8922-134e5d1fd312" width="900">
 
 - A website that focused on electric vehicles so that users could make educated decisions on EV purchases
 - My contribution was a like and dislike table, where people could add cars and like/dislike them so that others could see the most popular cars
@@ -42,7 +42,7 @@ What I learned:
 
 ### NBA Stats Project - Petite Pandas
 
-<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/faec9186-3465-4086-a787-1a6b71da39b6">
+<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/faec9186-3465-4086-a787-1a6b71da39b6" width="900">
 
 - Allowed users to see the stats for their favorite NBA teams
 - Utilized Pandas and Numpy to sort, extract, and visualize data
@@ -58,7 +58,7 @@ What I learned:
 
 ### Cosmic Carnage - Eaters
 
-<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/57e47f59-d2cc-47bf-8d93-6ea6eaa3d77c">
+<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/57e47f59-d2cc-47bf-8d93-6ea6eaa3d77c" width="900">
 
 - A website that allows users to post images, have fun, and study
 - A very interactive game and quiz with their own respective leaderboard
@@ -74,7 +74,7 @@ What I learned:
 
 ### ASL Recognition - GPT Warriors
 
-<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/38350ae4-163a-46ab-98e1-f7d31637845f">
+<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/38350ae4-163a-46ab-98e1-f7d31637845f" width="900">
 
 - A website to provide users with knowledge of American Sign Language
 - Memory game where users showed a sign just shown to them
@@ -88,7 +88,7 @@ What I learned:
 
 ### Stocks AI - CSA-AI
 
-<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/ddb2c41c-ebe7-42a5-9186-ccec2e1c4673">
+<img src="https://github.com/TayKimmy/CSA-Repository/assets/107821010/ddb2c41c-ebe7-42a5-9186-ccec2e1c4673" width="900">
 
 - A website primarily focused on stocks and predicting them using an AI model - LSTMs
 - We also had classes and utilized online APIs to show stock prices
