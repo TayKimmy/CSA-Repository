@@ -50,21 +50,78 @@ courses: {'csa': {'week': 30}}
 
 
 ## Missed Questions:
-| Question # | Why I missed it | How I will improve |
-| - | - | - |
-| 1 | I missed it because I thought that since s wasa defined using Student, it only used the Student method, not the GradStudent method. | I will make sure to review inheritance and understand when which methods are used and how to call them. |
-| 5 | I got this question wrong because I didn't notice that the class Car didn't have a constructor with no parameters. | I will make sure to look at the code in detail and look especially at the different parameters in inheritance problems. |
-| 9 | I didn't look at the for loops properly and I didn't realize that when i and j are both 0, it skips the statement because j is not less than i. | When there are nested for loops, I will make sure to pay special attention to the parameters and what happens as the indexes increase. |
-| 15 | I didn't read the prompts properly and it just sounded like it didn't make sense. | I will make sure to read the prompts properly and culminate a deeper understanding of inheritance and its benefits. |
-| 20 | I again forgot that C1 didn't have the no parameter constructor, so C2 cannot either. | Read the code in depth and look carefully at inheritance methods. |
-| 21 | I just lacked knowledge on interfaces. | Study interfaces. |
-| 22 | I didn't notice that the method was void, and therefore didn't return anything. It only changed the values in the array and not the integer y. | Look at code carefully. |
-| 23 | I forgot that the second parameter of the .substring method is noninclusive, making me think that the loop was out of bounds. | Make sure to think properly about different methods. |
-| 30 | Again, I didn't realize that when an object is defined using the parent class but uses new child class, it uses the method of the child class. | Study inheritance more. |
-| 31 | I still don't really understand why. | Look over the sorts carefully and also read the question properly. |
-| 36 | Again, I forgot about the inheritance using the subclass methods even when defined using the superclass method. | Relook inheritance. |
-| 37 | Selection sort still does its iterations even if the array is sorted. | Study selection sort. |
-| 38 | I forgot that the if loop was saying or. If either condition was true, then the code would return true. | Look at code properly. |
+<table border="1">
+    <tr>
+        <th>Question #</th>
+        <th>Why I missed it</th>
+        <th>How I will improve</th>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>I missed it because I thought that since s was defined using Student, it only used the Student method, not the GradStudent method.</td>
+        <td>I will make sure to review inheritance and understand when which methods are used and how to call them.</td>
+    </tr>
+    <tr>
+        <td>5</td>
+        <td>I got this question wrong because I didn’t notice that the class Car didn’t have a constructor with no parameters.</td>
+        <td>I will make sure to look at the code in detail and look especially at the different parameters in inheritance problems.</td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>I didn’t look at the for loops properly and I didn’t realize that when i and j are both 0, it skips the statement because j is not less than i.</td>
+        <td>When there are nested for loops, I will make sure to pay special attention to the parameters and what happens as the indexes increase.</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>I didn’t read the prompts properly and it just sounded like it didn’t make sense.</td>
+        <td>I will make sure to read the prompts properly and culminate a deeper understanding of inheritance and its benefits.</td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>I again forgot that C1 didn’t have the no parameter constructor, so C2 cannot either.</td>
+        <td>Read the code in depth and look carefully at inheritance methods.</td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td>I just lacked knowledge on interfaces.</td>
+        <td>Study interfaces.</td>
+    </tr>
+    <tr>
+        <td>22</td>
+        <td>I didn’t notice that the method was void, and therefore didn’t return anything. It only changed the values in the array and not the integer y.</td>
+        <td>Look at code carefully.</td>
+    </tr>
+    <tr>
+        <td>23</td>
+        <td>I forgot that the second parameter of the .substring method is noninclusive, making me think that the loop was out of bounds.</td>
+        <td>Make sure to think properly about different methods.</td>
+    </tr>
+    <tr>
+        <td>30</td>
+        <td>Again, I didn’t realize that when an object is defined using the parent class but uses new child class, it uses the method of the child class.</td>
+        <td>Study inheritance more.</td>
+    </tr>
+    <tr>
+        <td>31</td>
+        <td>I still don’t really understand why.</td>
+        <td>Look over the sorts carefully and also read the question properly.</td>
+    </tr>
+    <tr>
+        <td>36</td>
+        <td>Again, I forgot about the inheritance using the subclass methods even when defined using the superclass method.</td>
+        <td>Relook inheritance.</td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td>Selection sort still does its iterations even if the array is sorted.</td>
+        <td>Study selection sort.</td>
+    </tr>
+    <tr>
+        <td>38</td>
+        <td>I forgot that the if loop was saying or. If either condition was true, then the code would return true.</td>
+        <td>Look at code properly.</td>
+    </tr>
+</table>
 
 ### My Score: 27/40
 
